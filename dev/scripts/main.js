@@ -1,15 +1,13 @@
-
-
-
 const app = {};
 
 app.apiURL = 'https://openapi.etsy.com/v2/listings/active.js';
 app.api_key = '8zdq9j960j81dpfuohsa0pnm';
 
-let userGender;
-let userCategory;
+// let userGender;
+// let userCategory;
 
 app.getUserResult = (gender, category) => {
+    console.log(gender, category);
     $.ajax({
         url: app.apiURL,
         method: 'GET',
@@ -18,26 +16,50 @@ app.getUserResult = (gender, category) => {
             api_key: app.api_key,
             format: 'jsonp',
             tags: gender,
-            category: category
+            category: category,
+            includes: 'Images(url_fullxfull)'
         }
     })
+
+    
         .then((res) => {
-            console.log(res);
+            console.log(res.results);
+
+            const resultArray = res.results;
+    
+            const result = [];
+            const item1 = resultArray[Math.floor(Math.random() * resultArray.length)]
+            const item2 = resultArray[Math.floor(Math.random() * resultArray.length)]
+            const item3 = resultArray[Math.floor(Math.random() * resultArray.length)]
+            result.push(item1, item2, item3);
+            console.log(result); 
+
+            //get image
+            result.forEach(function(gift){
+                
+                //need to run for each of the result array to make sure listing_id doesnt equal
+
+                //
+                
+                const itemImage = gift.Images[0];
+                console.log(itemImage);
+            
+                
+            })
+            
         });
     };
 
 
-app.getUserInfo= function(){
-    $('.gender').on('click', function(){
-        userGender = $('input[name=gender]:checked').val();
-    });
+$('form').on('submit', function(e){
+    e.preventDefault();
 
-    $('.category').on('click', function(){
-        userCategory = $('input[name=category]:checked').val();
-    });
+    let userGender = $('input[name=gender]:checked').val();
+
+    let userCategory = $('input[name=category]:checked').val();
 
     app.getUserResult(userGender, userCategory);
-};
+});
 
 
 
@@ -66,7 +88,7 @@ app.getUserInfo= function(){
 
 
 app.init = function(){
-  app.getUserInfo();
+  /* app.getUserInfo(); */
   console.log('it is working');
 };
 
