@@ -1,7 +1,4 @@
-const hey = "hello"
-const test = "test"
-console.log(test);
-console.log(hey);
+
 
 
 const app = {};
@@ -9,7 +6,10 @@ const app = {};
 app.apiURL = 'https://openapi.etsy.com/v2/listings/active.js';
 app.api_key = '8zdq9j960j81dpfuohsa0pnm';
 
-app.getCategory = () => {
+let userGender;
+let userCategory;
+
+app.getUserResult = (gender, category) => {
     $.ajax({
         url: app.apiURL,
         method: 'GET',
@@ -17,16 +17,30 @@ app.getCategory = () => {
         data: {
             api_key: app.api_key,
             format: 'jsonp',
-            category_path: 'men', 
-            tags:'floral'
+            tags: gender,
+            category: category
         }
     })
         .then((res) => {
             console.log(res);
-
-            /* app.display(res.artObjects); */
         });
+    };
+
+
+app.getUserInfo= function(){
+    $('.gender').on('click', function(){
+        userGender = $('input[name=gender]:checked').val();
+    });
+
+    $('.category').on('click', function(){
+        userCategory = $('input[name=category]:checked').val();
+    });
+
+    app.getUserResult(userGender, userCategory);
 };
+
+
+
 
 
 //User comes to site, starts off with option to select a category (that we have predetermined and given as choices)
@@ -51,12 +65,12 @@ app.getCategory = () => {
 //When user selects Get these gifts >> 3 pages will be generated, each of the gift items (from the url array)
 
 
-app.getCategory();
+app.init = function(){
+  app.getUserInfo();
+  console.log('it is working');
+};
 
 
-
-
-/* 
 $(function () {
-    app();
-}); */
+    app.init();
+}); 
