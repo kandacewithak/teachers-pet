@@ -13,41 +13,49 @@
 
   </header>
 
-  <main>
+  
+<main>
+<form action="">
+  <fieldset class="gender">
+    <div class="radioButtons">
+      <input type="radio" id="male" name="gender" value="men" />
+      <label for="male">Him</label>
+    </div>
+    <div class="radioButtons">
+      <input type="radio" id="female" name="gender" value="women" />
+      <label for="female">Her</label>
+    </div>
+    <div class="radioButtons">
+      <input type="radio" id="both" name="gender" value="both" />
+      <label for="both">Both</label>
+    </div>
+  </fieldset>
 
-    <section class="genderQuestion">
-      <fieldset class="gender">
-        <div class="radioButtons">
-          <input type="radio" id="male" name="gender" value="men" />
-          <label for="male">Him</label>
-        </div>
-        <div class="radioButtons">
-          <input type="radio" id="female" name="gender" value="women" />
-          <label for="female">Her</label>
-        </div>
-        <div class="radioButtons">
-          <input type="radio" id="both" name="gender" value="both" />
-          <label for="both">Both</label>
-        </div>
-      </fieldset>
-    </section>
+  <fieldset class="category">
 
-    <section class="categoryQuestion">
-      <fieldset class="category">
-        <div class="radioButtons">
-          <input type="radio" id="clothing" name="category" value="clothing">
-          <label for="clothing">Clothing</label>
-        </div>
-        <!-- <div class="radioButtons">
-          <input type="radio" id="female" name="gender" value="women">
-          <label for="female">Her</label>
-        </div>
-        <div class="radioButtons">
-          <input type="radio" id="both" name="gender" value="both">
-          <label for="both">Both</label>
-        </div> -->
-      </fieldset>
-    </section>
+    <div class="radioButtons">
+      <input type="radio" id="clothing" name="category" value="clothing">
+      <label for="clothing">Clothing</label>
+    </div>
+
+    <div class="radioButtons">
+      <input type="radio" id="houseware" name="category" value="housewares">
+      <label for="houseware">Houseware</label>
+    </div>
+
+    <div class="radioButtons">
+      <input type="radio" id="toy" name="category" value="toys">
+      <label for="clothing">Toys</label>
+    </div>
+
+    
+  </fieldset>
+
+  <div class="submit-container">
+    <input type="submit" value="Giftify">
+  </div>
+</form>
+
 
     <section class="gifts">
 
