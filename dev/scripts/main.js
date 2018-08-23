@@ -47,11 +47,15 @@ app.getUserResult = (gender, category) => {
             console.log(finalResult); 
 
             // use the forEach method to display item info on page
+            $('.giftContainer').empty();
             finalResult.forEach((item) => {
                 const giftPiece = $('<div>').addClass('giftResult');
                 const image = $('<img>').attr('src', item.Images[0].url_fullxfull);
-                console.log(image);
-                $('.giftContainer').append(giftPiece, image);
+                const title = $('<h2>').html(item.title);
+                const price = $('<h3>').html(`$${item.price} USD`);
+                /* console.log(image); */
+                giftPiece.append(image, title, price);
+                $('.giftContainer').append(giftPiece);
             });
         });
     };

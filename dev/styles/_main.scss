@@ -1,0 +1,15 @@
+.giftContainer {
+    display: flex;
+
+}
+
+.giftResult {
+    display: flex;
+    flex-direction:column;
+    flex-basis: 33%;
+    height:5%;
+}
+
+.giftResult img {
+    max-width: 100%;
+}
