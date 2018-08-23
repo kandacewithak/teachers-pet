@@ -32,21 +32,13 @@ app.getUserResult = (gender, category) => {
             // create an empty array for the three random items from Etsy
             
             app.numberGenerator(resultArray);
+            app.globalList = resultArray;
 
+            console.log(app.globalList);
+            
 
-           /*  const refreshOne = function(){
-                const randomNumber = Math.floor(Math.random() * resultArray.length)
-                const newItem = resultArray[randomNumber];
-                // we splice the item so that it does not repeat in our results; we used (item1, item1) because it is the required syntax and just (item1) didn't give us the results we wanted
-                /* Result.push(newItem); */
+           
 
-
-
-
-            $('.giftContainer').on('click', '#changeItem', function(e){
-                e.preventDefault();
-                refreshOne();
-            });
         });
 
         
@@ -81,30 +73,41 @@ app.numberGenerator = function (firstArray) {
 
     app.showResults(finalResult);
 
-    app.globalList = finalResult;
 };
 
-
+app.changeGenerator = function (array){
+    const newItemNumber = Math.floor(Math.random() * array.length)
+    const newItem = array[newItemNumber];
+    console.log(newItem);
+}
 
 app.showResults = function(array){
     // use the forEach method to display item info on page
     $('.giftContainer').empty();
     
+    let i = 1
+
+    array.forEach((item) => {
+
+        const giftPiece = $('<div>').addClass('giftResult' + i).addClass('giftResult')
 
 
-   array.forEach((item) => {
-        const giftPiece = $('<div>').addClass('giftResult');
-        const imageDiv = $('<div class="giftImage">');
-        const image = $('<img>').attr('src', item.Images[0].url_fullxfull);
+        const imageDiv = $(`<div class="giftImage${i}">`);
+        const image = $('<img>').attr('src', item.Images[0].url_fullxfull).addClass('image' + i);
+
         imageDiv.append(image);
-        const title = $('<h2>').html(item.title);
-        const price = $('<h3>').html(`$${item.price} USD`);
-        const change = $('<input type="submit" id="changeItem" value="Change Item">');
-        /* console.log(image); */
+        const title = $('<h2>').addClass('itemTitle' + i).html(item.title);
+        const price = $('<h3>').addClass('itemPrice' + i).html(`$${item.price} USD`);
+        const change = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem' + i);
+
+        i++
+        
         giftPiece.append(imageDiv, title, price, change);
         $('.giftContainer').append(giftPiece);
+        
     });
 };
+
 
 $('form').on('submit', function(e){
     e.preventDefault();
@@ -114,10 +117,41 @@ $('form').on('submit', function(e){
 });
 
 
-$('#changeItem').on('submit', function(e) {
+
+//change single items
+
+$('.giftContainer').on('click', '.changeItem1', function (e) {
     e.preventDefault();
-    app
+    console.log('this works');
+
+    const updatedItem = app.changeGenerator(app.globalList);
+    console.log(updatedItem);
+    
+    $('.giftContainer .image1').html(`${updatedItem}.Images[0]`);
 })
+
+
+$('.giftContainer').on('click', '.changeItem2', function (e) {
+    e.preventDefault();
+    console.log('this works');
+
+    const updatedItem = app.changeGenerator(app.globalList);
+    console.log(this);
+
+    /* updatedItem. */
+})
+
+
+$('.giftContainer').on('click', '.changeItem3', function (e) {
+    e.preventDefault();
+    console.log('this works');
+
+    const updatedItem = app.changeGenerator(app.globalList);
+    console.log(this);
+
+    /* updatedItem. */
+})
+
 
 // REFRSH ALL
 // $('.giftContainer').on('click', '#changeItem', function(e){
