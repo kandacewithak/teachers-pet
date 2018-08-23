@@ -30,52 +30,69 @@ app.getUserResult = (gender, category) => {
             console.log(resultArray);
 
             // create an empty array for the three random items from Etsy
-            const finalResult = [];
+            
+            app.numberGenerator(resultArray);
 
-            const numberGenerator = function(){
-                // generate three different random numbers to select three items from the resulting array that we will display on the page
-                const randomNumber1 = Math.floor(Math.random() * resultArray.length)
-                const item1 = resultArray[randomNumber1];
-                // we splice the item so that it does not repeat in our results; we used (item1, item1) because it is the required syntax and just (item1) didn't give us the results we wanted
-                resultArray.splice(item1, 1);
 
-                const randomNumber2 = Math.floor(Math.random() * resultArray.length)
-                const item2 = resultArray[randomNumber2];
-                resultArray.splice(item2, 1);
-
-                const randomNumber3 = Math.floor(Math.random() * resultArray.length)
-                const item3 = resultArray[randomNumber3];
-                resultArray.splice(item3, 1);
-
-                // after we have three random items, we push them into our new array finalResult
-                finalResult.push(item1, item2, item3);
-                console.log(finalResult); 
-            };
-
-            numberGenerator();
-
-        
-
-            const refreshOne = function(){
+           /*  const refreshOne = function(){
                 const randomNumber = Math.floor(Math.random() * resultArray.length)
                 const newItem = resultArray[randomNumber];
                 // we splice the item so that it does not repeat in our results; we used (item1, item1) because it is the required syntax and just (item1) didn't give us the results we wanted
-                finalResult.push(newItem);
+                /* Result.push(newItem); */
 
-                console.log(newItem);
-            };
+
+
 
             $('.giftContainer').on('click', '#changeItem', function(e){
                 e.preventDefault();
                 refreshOne();
             });
         });
+
+        
+        
     };
 
-app.showResults = function(){
+     // generate three different random numbers to select three items from the resulting array that we will display on the page
+
+app.globalList = [];     
+
+app.numberGenerator = function (firstArray) {
+
+    const finalResult = [];
+
+
+    // we splice the item so that it does not repeat in our results; we used (item1, item1) because it is the required syntax and just (item1) didn't give us the results we wanted
+    const randomNumber1 = Math.floor(Math.random() * firstArray.length)
+    const item1 = firstArray.splice(randomNumber1, 1)[0];
+    
+
+    const randomNumber2 = Math.floor(Math.random() * firstArray.length)
+    const item2 = firstArray.splice(randomNumber2, 1)[0];
+    
+    
+    const randomNumber3 = Math.floor(Math.random() * firstArray.length)
+    const item3 = firstArray.splice(randomNumber3, 1)[0];
+    
+
+    // after we have three random items, we push them into our new array finalResult
+    finalResult.push(item1, item2, item3);
+    console.log(finalResult);
+
+    app.showResults(finalResult);
+
+    app.globalList = finalResult;
+};
+
+
+
+app.showResults = function(array){
     // use the forEach method to display item info on page
     $('.giftContainer').empty();
-    finalResult.forEach((item) => {
+    
+
+
+   array.forEach((item) => {
         const giftPiece = $('<div>').addClass('giftResult');
         const imageDiv = $('<div class="giftImage">');
         const image = $('<img>').attr('src', item.Images[0].url_fullxfull);
@@ -96,6 +113,11 @@ $('form').on('submit', function(e){
     app.getUserResult(userGender, userCategory);
 });
 
+
+$('#changeItem').on('submit', function(e) {
+    e.preventDefault();
+    app
+})
 
 // REFRSH ALL
 // $('.giftContainer').on('click', '#changeItem', function(e){
