@@ -1,11 +1,14 @@
+
 const app = {};
 
+// assign variables for the API URL and key
 app.apiURL = 'https://openapi.etsy.com/v2/listings/active.js';
 app.api_key = '8zdq9j960j81dpfuohsa0pnm';
 
 // let userGender;
 // let userCategory;
 
+// a function for making the ajax request that takes two parameters, gender & category
 app.getUserResult = (gender, category) => {
     console.log(gender, category);
     $.ajax({
@@ -20,33 +23,36 @@ app.getUserResult = (gender, category) => {
             includes: 'Images(url_fullxfull)'
         }
     })
-
-    
         .then((res) => {
-            console.log(res.results);
-
+            // after the results are returned, create a new variable for the resulting array
             const resultArray = res.results;
-    
-            const result = [];
-            const item1 = resultArray[Math.floor(Math.random() * resultArray.length)]
-            const item2 = resultArray[Math.floor(Math.random() * resultArray.length)]
-            const item3 = resultArray[Math.floor(Math.random() * resultArray.length)]
-            result.push(item1, item2, item3);
-            console.log(result); 
 
-            //get image
-            result.forEach(function(gift){
-                
-                //need to run for each of the result array to make sure listing_id doesnt equal
+            // create an empty array for the three random items from Etsy
+            const finalResult = [];
 
-                //
-                
-                const itemImage = gift.Images[0];
-                console.log(itemImage);
-            
-                
-            })
-            
+            // generate three different random numbers to select three items from the resulting array that we will display on the page
+            const randomNumber1 = Math.floor(Math.random() * resultArray.length)
+            const item1 = resultArray[randomNumber1];
+            // we splice the item so that it does not repeat in our results; we used (item1, item1) because it is the required syntax and just (item1) didn't give us the results we wanted
+            resultArray.splice(item1, item1);
+            const randomNumber2 = Math.floor(Math.random() * resultArray.length)
+            const item2 = resultArray[randomNumber2];
+            resultArray.splice(item2, item2);
+            const randomNumber3 = Math.floor(Math.random() * resultArray.length)
+            const item3 = resultArray[randomNumber3];
+            resultArray.splice(item3, item3);
+
+            // after we have three random items, we push them into our new array finalResult
+            finalResult.push(item1, item2, item3);
+            console.log(finalResult); 
+
+            // use the forEach method to display item info on page
+            finalResult.forEach((item) => {
+                const giftPiece = $('<div>').addClass('giftResult');
+                const image = $('<img>').attr('src', item.Images[0].url_fullxfull);
+                console.log(image);
+                $('.giftContainer').append(giftPiece, image);
+            });
         });
     };
 
@@ -88,7 +94,6 @@ $('form').on('submit', function(e){
 
 
 app.init = function(){
-  /* app.getUserInfo(); */
   console.log('it is working');
 };
 

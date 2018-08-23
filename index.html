@@ -14,52 +14,58 @@
   </header>
 
   
-<main>
-<form action="">
-  <fieldset class="gender">
-    <div class="radioButtons">
-      <input type="radio" id="male" name="gender" value="men" />
-      <label for="male">Him</label>
-    </div>
-    <div class="radioButtons">
-      <input type="radio" id="female" name="gender" value="women" />
-      <label for="female">Her</label>
-    </div>
-    <div class="radioButtons">
-      <input type="radio" id="both" name="gender" value="both" />
-      <label for="both">Both</label>
-    </div>
-  </fieldset>
+  <main>
+    <form action=""> 
+      <!-- use flickity carousel here -->
+      <fieldset class="gender">
+        <div class="radioButtons">
+          <input type="radio" id="male" name="gender" value="men" />
+          <label for="male">Him</label>
+        </div>
+        <div class="radioButtons">
+          <input type="radio" id="female" name="gender" value="women" />
+          <label for="female">Her</label>
+        </div>
+        <div class="radioButtons">
+          <input type="radio" id="both" name="gender" value="both" />
+          <label for="both">Both</label>
+        </div>
+      </fieldset>
 
-  <fieldset class="category">
+      <fieldset class="category">
+        <div class="radioButtons">
+          <input type="radio" id="clothing" name="category" value="clothing">
+          <label for="clothing">Clothing</label>
+        </div>
 
-    <div class="radioButtons">
-      <input type="radio" id="clothing" name="category" value="clothing">
-      <label for="clothing">Clothing</label>
-    </div>
+        <div class="radioButtons">
+          <input type="radio" id="housewares" name="category" value="housewares">
+          <label for="housewares">Housewares</label>
+        </div>
 
-    <div class="radioButtons">
-      <input type="radio" id="houseware" name="category" value="housewares">
-      <label for="houseware">Houseware</label>
-    </div>
+        <div class="radioButtons">
+          <input type="radio" id="toys" name="category" value="toys">
+          <label for="toys">Toys</label>
+        </div>
 
-    <div class="radioButtons">
-      <input type="radio" id="toy" name="category" value="toys">
-      <label for="clothing">Toys</label>
-    </div>
+        <div class="radioButtons">
+          <input type="radio" id="jewellery" name="category" value="jewellery">
+          <label for="jewellery">Jewellery</label>
+        </div>
+      </fieldset>
 
-    
-  </fieldset>
+      <div class="submit-container">
+        <input type="submit" value="Giftify">
+      </div>
 
-  <div class="submit-container">
-    <input type="submit" value="Giftify">
-  </div>
-</form>
-
+    </form>
 
     <section class="gifts">
+      <div class="giftContainer">
 
+      </div> <!-- Use flickity carousel here -->
     </section>
+
   </main>
 
   <footer>
@@ -68,9 +74,9 @@
 
 
 
-  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
-  <script src="public/scripts/main.js"></script>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <script src="public/scripts/main.js"></script>
 
-  
+
 </body>
 </html>
