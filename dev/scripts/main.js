@@ -25,51 +25,84 @@ app.getUserResult = (gender, category) => {
     })
         .then((res) => {
             // after the results are returned, create a new variable for the resulting array
+
             const resultArray = res.results;
+            console.log(resultArray);
 
             // create an empty array for the three random items from Etsy
             const finalResult = [];
 
-            // generate three different random numbers to select three items from the resulting array that we will display on the page
-            const randomNumber1 = Math.floor(Math.random() * resultArray.length)
-            const item1 = resultArray[randomNumber1];
-            // we splice the item so that it does not repeat in our results; we used (item1, item1) because it is the required syntax and just (item1) didn't give us the results we wanted
-            resultArray.splice(item1, item1);
-            const randomNumber2 = Math.floor(Math.random() * resultArray.length)
-            const item2 = resultArray[randomNumber2];
-            resultArray.splice(item2, item2);
-            const randomNumber3 = Math.floor(Math.random() * resultArray.length)
-            const item3 = resultArray[randomNumber3];
-            resultArray.splice(item3, item3);
+            const numberGenerator = function(){
+                // generate three different random numbers to select three items from the resulting array that we will display on the page
+                const randomNumber1 = Math.floor(Math.random() * resultArray.length)
+                const item1 = resultArray[randomNumber1];
+                // we splice the item so that it does not repeat in our results; we used (item1, item1) because it is the required syntax and just (item1) didn't give us the results we wanted
+                resultArray.splice(item1, 1);
 
-            // after we have three random items, we push them into our new array finalResult
-            finalResult.push(item1, item2, item3);
-            console.log(finalResult); 
+                const randomNumber2 = Math.floor(Math.random() * resultArray.length)
+                const item2 = resultArray[randomNumber2];
+                resultArray.splice(item2, 1);
 
-            // use the forEach method to display item info on page
-            $('.giftContainer').empty();
-            finalResult.forEach((item) => {
-                const giftPiece = $('<div>').addClass('giftResult');
-                const image = $('<img>').attr('src', item.Images[0].url_fullxfull);
-                const title = $('<h2>').html(item.title);
-                const price = $('<h3>').html(`$${item.price} USD`);
-                /* console.log(image); */
-                giftPiece.append(image, title, price);
-                $('.giftContainer').append(giftPiece);
+                const randomNumber3 = Math.floor(Math.random() * resultArray.length)
+                const item3 = resultArray[randomNumber3];
+                resultArray.splice(item3, 1);
+
+                // after we have three random items, we push them into our new array finalResult
+                finalResult.push(item1, item2, item3);
+                console.log(finalResult); 
+            };
+
+            numberGenerator();
+
+        
+
+            const refreshOne = function(){
+                const randomNumber = Math.floor(Math.random() * resultArray.length)
+                const newItem = resultArray[randomNumber];
+                // we splice the item so that it does not repeat in our results; we used (item1, item1) because it is the required syntax and just (item1) didn't give us the results we wanted
+                finalResult.push(newItem);
+
+                console.log(newItem);
+            };
+
+            $('.giftContainer').on('click', '#changeItem', function(e){
+                e.preventDefault();
+                refreshOne();
             });
         });
     };
 
+app.showResults = function(){
+    // use the forEach method to display item info on page
+    $('.giftContainer').empty();
+    finalResult.forEach((item) => {
+        const giftPiece = $('<div>').addClass('giftResult');
+        const imageDiv = $('<div class="giftImage">');
+        const image = $('<img>').attr('src', item.Images[0].url_fullxfull);
+        imageDiv.append(image);
+        const title = $('<h2>').html(item.title);
+        const price = $('<h3>').html(`$${item.price} USD`);
+        const change = $('<input type="submit" id="changeItem" value="Change Item">');
+        /* console.log(image); */
+        giftPiece.append(imageDiv, title, price, change);
+        $('.giftContainer').append(giftPiece);
+    });
+};
 
 $('form').on('submit', function(e){
     e.preventDefault();
-
     let userGender = $('input[name=gender]:checked').val();
-
     let userCategory = $('input[name=category]:checked').val();
-
     app.getUserResult(userGender, userCategory);
 });
+
+
+// REFRSH ALL
+// $('.giftContainer').on('click', '#changeItem', function(e){
+//     e.preventDefault();
+//     console.log('it clicked');
+//     app.getUserResult();
+// });
 
 
 
