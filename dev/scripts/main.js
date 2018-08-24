@@ -84,7 +84,7 @@ app.showResults = function(array){
         const price = $('<h3>').addClass('itemPrice' + i).html(`$${item.price} USD`);
         const change = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem' + i);
         // link item button here instead of input
-        const linkToItem = $('<input type="submit" id="linkItem" value="Link to Item">').addClass('linkItem' + i);
+        const linkToItem = $('<a>').attr('href', item.url).attr('id', "linkItem" + i).html("Link to item");
 
         i++
         
@@ -125,9 +125,11 @@ $('.giftContainer').on('click', '.changeItem1', function (e) {
     const updatedTitle1 = $('<h2>').addClass('itemTitle1').html(updatedItem.title);
     const updatedPrice1 = $('<h3>').addClass('itemPrice1').html(`$${updatedItem.price} USD`);
     const updatedChange1 = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem1');
-    const linkToItem = $('<input type="submit" id="linkItem" value="Link to Item">').addClass('linkItem' + i)
 
-    $('.giftResult1').append(updatedImageDiv1, updatedTitle1, updatedPrice1, updatedChange1);
+    const linkToItem1 = $('<a>').attr('href', updatedItem.url).attr('id', "linkItem1").html("Link to item");
+
+
+    $('.giftResult1').append(updatedImageDiv1, updatedTitle1, updatedPrice1, updatedChange1, linkToItem1);
 })
 
 
@@ -145,7 +147,9 @@ $('.giftContainer').on('click', '.changeItem2', function (e) {
     const updatedPrice2 = $('<h3>').addClass('itemPrice2').html(`$${updatedItem.price} USD`);
     const updatedChange2 = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem2');
 
-    $('.giftResult2').append(updatedImageDiv2, updatedTitle2, updatedPrice2, updatedChange2);
+    const linkToItem2 = $('<a>').attr('href', updatedItem.url).attr('id', "linkItem2").html("Link to item");
+
+    $('.giftResult2').append(updatedImageDiv2, updatedTitle2, updatedPrice2, updatedChange2, linkToItem2);
 
 })
 
@@ -164,7 +168,9 @@ $('.giftContainer').on('click', '.changeItem3', function (e) {
     const updatedPrice3 = $('<h3>').addClass('itemPrice3').html(`$${updatedItem.price} USD`);
     const updatedChange3 = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem3');
 
-    $('.giftResult3').append(updatedImageDiv3, updatedTitle3, updatedPrice3, updatedChange3);
+    const linkToItem3 = $('<a>').attr('href', updatedItem.url).attr('id', "linkItem3").html("Link to item");
+
+    $('.giftResult3').append(updatedImageDiv3, updatedTitle3, updatedPrice3, updatedChange3, linkToItem3);
 })
 
 
