@@ -186,6 +186,17 @@ p {
 .arrow {
   align-self: flex-end; }
 
+/* GENDER SELECTION SECTION STYLES */
+.genderCatergoryForm {
+  display: block;
+  height: 100vh;
+  margin: 0 auto; }
+
+.gender {
+  display: flex;
+  justify-content: center; }
+
+/* GIFT RESULTS CONTAINER STYLES */
 .gifts {
   height: 100vh; }
 
