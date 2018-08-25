@@ -2,6 +2,11 @@ html {
     font-size: 62.5%;
 }
 
+
+body {
+    font-family: 'Cutive Mono', monospace;
+}
+
 h1, h2, h3 {
     margin:0;
     padding:0;
@@ -10,8 +15,52 @@ h1, h2, h3 {
 
 h1 {
     color: #fc4b2a;
+    font-size: 8rem;
+    letter-spacing: 2px;
+    font-weight: 500;
 }
 
-body {
+h1::after {
+    content:'';
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: #fc4b2a;
+    margin: 20px auto;
+}
+
+h2 {
+    font-size: 3rem;  
+}
+
+h3 {
+    font-size: 1.6rem;
     font-family: 'Cutive Mono', monospace;
+    display: inline;
+}
+
+p {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+
+
+/* GENDER ICONS */
+.fa-mars::before {
+    font-size: 100px;
+}
+
+
+.fa-mars::before {
+    font-size: 100px;
+}
+
+
+.fa-venus::before {
+    font-size: 100px;
+}
+
+.fa-transgender::before {
+    font-size: 100px;
 }

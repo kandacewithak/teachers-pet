@@ -1,4 +1,43 @@
 
+/* RADIOBUTTON LABEL STYLING */
+
+input[type="radio"]{
+    visibility: hidden;
+    height: -1;
+    width: -1;
+}
+
+input[type='submit'] {
+    cursor: pointer;
+    background-color: #403F39;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: all .3s ease-out;
+    width: 220px;
+    padding: 10px;
+}
+
+
+label {
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: right;
+    padding: 5px 10px;
+    border-radius: 3px;
+    width:250px;
+/*     border: 1px solid blue;
+ */    background-color: #F1EFFF;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #FFD531;
+    transition: 0.3s ease-out all;
+    width:100%;
+}
+
+
+
 /* GENDER SELECTION SECTION STYLES */
 .genderCatergoryForm {
     display: block;
@@ -7,17 +46,30 @@
 
 }
 
-.gender {
+.gender {   
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.labelWrapper {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    padding-top: 18%;
 }
 
 
 
 /* GIFT RESULTS CONTAINER STYLES */
+
+.genderTitle{
+    padding-top: 60px;
+    text-align: center;
+}
+
 .gifts {
     height: 100vh;
-
 }
 
 .giftContainer {
@@ -40,3 +92,13 @@
     width: 100%;
     height: 300px;
 }
+
+//how to  make the border transition on hover or selection
+// .radioButtonContainer {
+//     height: 30%;
+//     border: 2px solid  #fc4b2a;
+//     border-radius: 50%;
+//     width: 28%;
+//     text-align: center;
+//     padding-top:10px;
+// }
