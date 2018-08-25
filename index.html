@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Project Four</title>
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Cutive+Mono:400,500,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Cutive+Mono:400,500" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-  <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.2/flickity.min.css">
   <link rel="stylesheet" href="public/styles/style.css">
 </head>
 <body>
@@ -19,10 +19,9 @@
         <p>Curated gifts from Etsy</p>
       </div>
       <div class="arrow">
-        <i class="fas fa-angle-down"></i>
+        <a href="#genderSection"><i class="fas fa-angle-down"></i></a>
       </div>
     </div>
-  
   </header>
 
   
@@ -30,8 +29,36 @@
 
     <form class="genderCatergoryForm">
 
-
       <!-- GENDER FIELDSET START -->
+      <div id="genderSection">
+
+        <fieldset class="gender">
+          <!-- use flickity carousel here -->
+        
+          <div class="radioButtons">
+            <input type="radio" id="male" name="gender" value="men">
+            <label for="male">
+              <i class="fas fa-mars"></i>
+              Him</label>
+          </div>
+        
+          <div class="radioButtons">
+            <input type="radio" id="female" name="gender" value="women">
+            <label for="female">
+              <i class="fas fa-venus"></i>
+            Her</label>
+          </div>
+            
+          <div class="radioButtons">
+            <input type="radio" id="both" name="gender" value="both">
+            <label for="both">
+              <i class="fas fa-transgender"></i>
+              Both</label>
+          </div>
+        </fieldset>
+      </div>
+
+      
     <div id="genderSection">
       <h2 class="genderTitle">Who are you shopping for?</h2>
 
@@ -68,33 +95,57 @@
   
       </fieldset>
     </div>
+
       <!-- GENDER FIELDSET END -->
 
 
 
       <!-- CATERGORY FIELDSET STARTS -->
-      <fieldset class="category">
-        <div class="radioButtons">
-          <input type="radio" id="clothing" name="category" value="clothing">
-          <label for="clothing">Clothing</label>
-        </div>
+      <div id="categorySection">
 
-        <div class="radioButtons">
-          <input type="radio" id="housewares" name="category" value="housewares">
-          <label for="housewares">Housewares</label>
-        </div>
+        <fieldset class="category">
 
-        <div class="radioButtons">
-          <input type="radio" id="toys" name="category" value="toys">
-          <label for="toys">Toys</label>
-        </div>
+        <!-- category carousel starts here -->
+          <div class="main-carousel">
 
-        <div class="radioButtons">
-          <input type="radio" id="jewellery" name="category" value="jewellery">
-          <label for="jewellery">Jewellery</label>
-        </div>
-      </fieldset>
-      <!-- CATERGORY FIELDSET ENDS -->
+            <div class="carousel-cell radioButtons">
+              <input type="radio" id="clothing" name="category" value="clothing">
+              <div class="categoryIcon">
+                <i class="fas fa-tshirt"></i>
+              </div>
+              <label for="clothing">Clothing</label>
+            </div>
+
+            <div class="carousel-cell radioButtons ">
+              <input type="radio" id="housewares" name="category" value="housewares">
+              <div class="categoryIcon">
+                <i class="fas fa-home"></i>
+              </div>
+              <label for="housewares">Housewares</label>
+            </div>
+
+            <div class="carousel-cell radioButtons">
+              <input type="radio" id="toys" name="category" value="toys">
+              <div class="categoryIcon">
+                <i class="fas fa-football-ball"></i>
+              </div>
+              <label for="toys">Toys</label>
+            </div>
+
+            <div class="carousel-cell radioButtons">
+              <input type="radio" id="jewellery" name="category" value="jewellery">
+              <div class="categoryIcon">
+                <i class="far fa-gem"></i>
+              </div>
+              <label for="jewellery">Jewellery</label>
+            </div>
+
+          </div>
+          <!-- category carousel ends here -->
+
+        </fieldset>
+        <!-- CATERGORY FIELDSET ENDS -->
+      </div>
 
       <div class="submit-container">
         <input type="submit" value="Giftify">
@@ -123,11 +174,13 @@
   </footer>
 
 
-    <!-- flickity script --> 
-    <script src="/path/to/flickity.pkgd.min.js"></script>
+   
 
     <!-- jquery script -->
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    
+     <!-- flickity script --> 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.2/flickity.pkgd.min.js"></script>
 
     <!-- link to js script -->
     <script src="public/scripts/main.js"></script>

@@ -15,12 +15,41 @@ header {
     text-align: center;
     flex-direction: column;
     justify-content: center;
+    padding: 50px 0;
 }
 
 .arrow {
     text-align: center;
-    align-self: flex-end;
+    font-size: 4rem;
+    margin-top: 50px;
 }
+
+.arrow a {
+    color: inherit;
+}
+
+h1 {
+    font-size: 8rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+h1::after {
+    content:'';
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: #fc4b2a;
+    margin: 20px auto;
+}
+
+p {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+
+
 
 
 

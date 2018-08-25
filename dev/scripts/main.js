@@ -182,10 +182,10 @@ $('.giftContainer').on('click', '.changeItem3', function (e) {
  });
 
 //flickity jQuery
-$('.main-gallery').flickity({
-    // options
-    cellAlign: 'left',
-    contain: true
+$(function() {
+    $('.main-carousel').flickity({
+        wrapAround: true
+    });
 });
 
 
