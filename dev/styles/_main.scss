@@ -1,13 +1,13 @@
 
 /* RADIOBUTTON LABEL STYLING */
 
-input[type="radio"]{
+.radioButtonsGender input[type="radio"]{
     visibility: hidden;
-    height: -1;
-    width: -1;
+    height: -1px;
+    width: -1px;
 }
 
-input[type='submit'] {
+.radioButtonsGender input[type='submit'] {
     cursor: pointer;
     background-color: #403F39;
     color: white;
@@ -18,38 +18,32 @@ input[type='submit'] {
     padding: 10px;
 }
 
-
-label {
+.radioButtonsGender label {
     cursor: pointer;
     vertical-align: middle;
     text-align: right;
     padding: 5px 10px;
     border-radius: 3px;
     width:250px;
-/*     border: 1px solid blue;
- */    background-color: #F1EFFF;
 }
 
-input[type="radio"]:checked + label {
+.radioButtonsGender input[type="radio"]:checked + label {
     background-color: #FFD531;
     transition: 0.3s ease-out all;
     width:100%;
 }
 
 
-
 /* GENDER SELECTION SECTION STYLES */
 
 .genderCatergoryForm {
     display: block;
-    height: 100vh;
     margin: 0 auto;
 }
 
 .gender {   
     display: flex;
     justify-content: space-around;
-    height: 100vh;
 }
 
 .labelWrapper {
@@ -60,8 +54,8 @@ input[type="radio"]:checked + label {
 }
 
 
-
 /* CATEGORY SELECTION SECTION STYLES */
+
 #categorySection {
     background-color: #FF7F50;
 }
@@ -70,23 +64,24 @@ input[type="radio"]:checked + label {
     padding: 50px 0;
 }
 
-.radioButtons {
+.radioButtonsCategory {
     display: flex;
     flex-direction: column;
 }
 
-.radioButtons input[type="radio"] {
+.radioButtonsCategory input[type="radio"] {
     visibility: hidden;
-    height: -1;
-    width: -1;
+    height: -1px;
+    width: -1px;
 }
 
-.radioButtons label {
+.radioButtonsCategory label {
     cursor: pointer;
     text-align: center;
     margin: 10px;
     font-size: 2.5rem;
 }
+
 
 .categoryIcon {
     text-align: center;
@@ -98,32 +93,47 @@ input[type="radio"]:checked + label {
 
 .carousel-cell {
     width: 33%; /* full width */
-    height: 40vh; /* height of carousel */
-}
-
-.flickity-button {
-background: transparent;
 }
 
 .flickity-prev-next-button {
-width: 75px;
-height: 75px;
+    width: 75px;
+    height: 75px;
+}
+
+fieldset {
+    border: none;
+}
+
+.submit-container {
+    text-align: center;
+}
+
+#giftify {
+    border: none;
+    margin-top: 50px;
+    padding: 20px 100px;
+    border-radius: 5px;
+    background-color: #FF7F50;
+    font-size: 2rem;
+    text-transform: uppercase;
 }
 
 /* GIFT RESULTS CONTAINER STYLES */
 
-.genderTitle{
+.genderTitle {
     padding-top: 60px;
     text-align: center;
 }
 
 .gifts {
-    height: 100vh;
+    margin-top: 20px;
+}
+.gifts h2 {
+    font-size: 1.4rem;
 }
 
 .giftContainer {
     display: flex;
-    border: 1px solid green;
     justify-content: space-between;
 }
 
@@ -132,7 +142,6 @@ height: 75px;
     flex-direction:column;
     flex-basis: 31%;
     margin: 0 1%;
-    border: 1px solid red;
     justify-content: space-between;
 
 }
