@@ -19,29 +19,6 @@ header {
 
 .arrow {
     text-align: center;
-}
-
-h1 {
-    font-size: 8rem;
-    letter-spacing: 2px;
-    font-weight: 500;
-}
-
-h1::after {
-    content:'';
-    display: block;
-    width: 150px;
-    height: 2px;
-    background-color: #fc4b2a;
-    margin: 20px auto;
-}
-
-p {
-    font-size: 2.2rem;
-    font-weight: 500;
-}
-
-.arrow {
     align-self: flex-end;
 }
 
