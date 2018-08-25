@@ -181,7 +181,12 @@ $('.giftContainer').on('click', '.changeItem3', function (e) {
     app.getUserResult();
  });
 
-
+//flickity jQuery
+$('.main-gallery').flickity({
+    // options
+    cellAlign: 'left',
+    contain: true
+});
 
 
 

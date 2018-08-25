@@ -155,6 +155,17 @@ header {
   height: 100vh;
   background-size: cover; }
 
+/* GENDER SELECTION SECTION STYLES */
+.genderCatergoryForm {
+  display: block;
+  height: 100vh;
+  margin: 0 auto; }
+
+.gender {
+  display: flex;
+  justify-content: center; }
+
+/* GIFT RESULTS CONTAINER STYLES */
 .gifts {
   height: 100vh; }
 
@@ -174,4 +185,4 @@ header {
 
 .giftResult1 img, .giftResult2 img, .giftResult3 img {
   width: 100%;
-  height: 900px; }
+  height: 300px; }
