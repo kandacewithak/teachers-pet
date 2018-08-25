@@ -25,17 +25,12 @@ app.getUserResult = (gender, category) => {
     })
         .then((res) => {
             // after the results are returned, create a new variable for the resulting array
-
             const resultArray = res.results;
-            // console.log(resultArray);
+
 
             // create an empty array for the three random items from Etsy
-            
             app.numberGenerator(resultArray);
             app.globalList = resultArray;
-
-            // console.log(app.globalList);
-
         });
     };
 
@@ -55,17 +50,14 @@ app.numberGenerator = function (firstArray) {
     const randomNumber2 = Math.floor(Math.random() * firstArray.length)
     const item2 = firstArray.splice(randomNumber2, 1)[0];
     
-    
     const randomNumber3 = Math.floor(Math.random() * firstArray.length)
     const item3 = firstArray.splice(randomNumber3, 1)[0];
     
 
     // after we have three random items, we push them into our new array finalResult
     finalResult.push(item1, item2, item3);
-    console.log(finalResult);
 
     app.showResults(finalResult);
-
 };
 
 app.showResults = function(array){
@@ -82,19 +74,20 @@ app.showResults = function(array){
         imageDiv.append(image);
         const title = $('<h2>').addClass('itemTitle' + i).html(item.title);
         const price = $('<h3>').addClass('itemPrice' + i).html(`$${item.price} USD`);
+        const linkDiv = $('<div>').addClass('linkChange' + i);
         const change = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem' + i);
         // link item button here instead of input
-        const linkToItem = $('<a>').attr('href', item.url).attr('id', "linkItem" + i).html("Link to item");
+        const linkToItem = $('<a>').attr('href', item.url).attr('id', "linkItem" + i).html('<i class="fas fa-external-link-alt">');
+        linkDiv.append(change, linkToItem);
 
         i++
-        
-        giftPiece.append(imageDiv, title, price, change, linkToItem);
+
+        giftPiece.append(imageDiv, title, price, linkDiv);
         $('.giftContainer').append(giftPiece);
-        
     });
 };
 
-
+// form submit
 $('form').on('submit', function(e){
     e.preventDefault();
     let userGender = $('input[name=gender]:checked').val();
@@ -109,13 +102,11 @@ app.changeGenerator = function (array){
     return newItem;
 }
 
-//change single items
-
+//change single items as opposed to all three
 $('.giftContainer').on('click', '.changeItem1', function (e) {
     e.preventDefault();
 
     const updatedItem = app.changeGenerator(app.globalList);
-    console.log(updatedItem);
 
     $('.giftResult1').empty();
 
@@ -124,19 +115,18 @@ $('.giftContainer').on('click', '.changeItem1', function (e) {
     updatedImageDiv1.append(updatedImage1);
     const updatedTitle1 = $('<h2>').addClass('itemTitle1').html(updatedItem.title);
     const updatedPrice1 = $('<h3>').addClass('itemPrice1').html(`$${updatedItem.price} USD`);
+    const linkDiv1 = $('<div>').addClass('linkChange1');
     const updatedChange1 = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem1');
+    const linkToItem1 = $('<a>').attr('href', updatedItem.url).attr('id', "linkItem1").html('<i class="fas fa-external-link-alt">');
+    linkDiv1.append(updatedChange1, linkToItem1);
 
-    const linkToItem1 = $('<a>').attr('href', updatedItem.url).attr('id', "linkItem1").html("Link to item");
-
-
-    $('.giftResult1').append(updatedImageDiv1, updatedTitle1, updatedPrice1, updatedChange1, linkToItem1);
+    $('.giftResult1').append(updatedImageDiv1, updatedTitle1, updatedPrice1, linkDiv1);
 })
 
 
 $('.giftContainer').on('click', '.changeItem2', function (e) {
     e.preventDefault();
     const updatedItem = app.changeGenerator(app.globalList);
-    console.log(updatedItem);
 
     $('.giftResult2').empty();
 
@@ -145,12 +135,12 @@ $('.giftContainer').on('click', '.changeItem2', function (e) {
     updatedImageDiv2.append(updatedImage2);
     const updatedTitle2 = $('<h2>').addClass('itemTitle2').html(updatedItem.title);
     const updatedPrice2 = $('<h3>').addClass('itemPrice2').html(`$${updatedItem.price} USD`);
+    const linkDiv2 = $('<div>').addClass('linkChange2');
     const updatedChange2 = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem2');
+    const linkToItem2 = $('<a>').attr('href', updatedItem.url).attr('id', "linkItem2").html('<i class="fas fa-external-link-alt">');
+    linkDiv2.append(updatedChange2, linkToItem2);
 
-    const linkToItem2 = $('<a>').attr('href', updatedItem.url).attr('id', "linkItem2").html("Link to item");
-
-    $('.giftResult2').append(updatedImageDiv2, updatedTitle2, updatedPrice2, updatedChange2, linkToItem2);
-
+    $('.giftResult2').append(updatedImageDiv2, updatedTitle2, updatedPrice2, linkDiv2);
 })
 
 
@@ -162,15 +152,15 @@ $('.giftContainer').on('click', '.changeItem3', function (e) {
 
     const updatedImageDiv3 = $(`<div class="giftImage3">`);
     const updatedImage3 =$('<img>').attr('src', updatedItem.Images[0].url_fullxfull).addClass('image3');
-    
     updatedImageDiv3.append(updatedImage3);
     const updatedTitle3 = $('<h2>').addClass('itemTitle3').html(updatedItem.title);
     const updatedPrice3 = $('<h3>').addClass('itemPrice3').html(`$${updatedItem.price} USD`);
+    const linkDiv3 = $('<div>').addClass('linkChange3');
     const updatedChange3 = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem3');
+    const linkToItem3 = $('<a>').attr('href', updatedItem.url).attr('id', "linkItem3").html('<i class="fas fa-external-link-alt">');
+    linkDiv3.append(updatedChange3, linkToItem3);
 
-    const linkToItem3 = $('<a>').attr('href', updatedItem.url).attr('id', "linkItem3").html("Link to item");
-
-    $('.giftResult3').append(updatedImageDiv3, updatedTitle3, updatedPrice3, updatedChange3, linkToItem3);
+    $('.giftResult3').append(updatedImageDiv3, updatedTitle3, updatedPrice3, linkDiv3);
 })
 
 
