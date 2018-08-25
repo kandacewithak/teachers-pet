@@ -136,6 +136,21 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   margin: 0 auto;
   max-width: 900px; }
 
+a {
+  text-decoration: black; }
+
+a:visited {
+  text-decoration: black; }
+
+a:hover {
+  text-decoration: black; }
+
+a:focus {
+  text-decoration: black; }
+
+a:hover, a:active {
+  text-decoration: black; }
+
 html {
   font-size: 62.5%; }
 
@@ -186,6 +201,10 @@ p {
 .fa-transgender::before {
   font-size: 100px; }
 
+/* FOOTER SOCIAL MEDIA ICONS */
+.footerSocial {
+  font-size: 1.8rem; }
+
 header {
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url(../assets/bg1.jpeg);
   height: 100vh;
@@ -231,16 +250,16 @@ p {
   height: -1px;
   width: -1px; }
 
-.radioButtonsGender input[type='submit'] {
-  cursor: pointer;
-  background-color: #403F39;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 10px;
-  transition: all .3s ease-out;
-  width: 220px;
-  padding: 10px; }
-
+/* .radioButtonsGender input[type='submit'] {
+    cursor: pointer;
+    background-color: #403F39;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: all .3s ease-out;
+    width: 220px;
+    padding: 10px;
+} */
 .radioButtonsGender label {
   cursor: pointer;
   vertical-align: middle;
@@ -253,6 +272,9 @@ p {
   background-color: #FFD531;
   transition: 0.3s ease-out all;
   width: 100%; }
+
+.radioButtonsGender a {
+  color: #000; }
 
 /* GENDER SELECTION SECTION STYLES */
 .submitChange input[type="submit"]:checked + label {
@@ -359,3 +381,23 @@ fieldset {
   background-color: #FF7F50;
   font-size: 2rem;
   text-transform: uppercase; }
+
+.submitChange {
+  text-align: center; }
+
+footer {
+  height: 130px;
+  background-color: #000;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  padding-bottom: 10px; }
+
+.copyright {
+  padding-top: 1%; }
+
+.footerSocial a {
+  color: white;
+  margin: 0 15px; }

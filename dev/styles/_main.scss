@@ -7,7 +7,7 @@
     width: -1px;
 }
 
-.radioButtonsGender input[type='submit'] {
+/* .radioButtonsGender input[type='submit'] {
     cursor: pointer;
     background-color: #403F39;
     color: white;
@@ -16,7 +16,7 @@
     transition: all .3s ease-out;
     width: 220px;
     padding: 10px;
-}
+} */
 
 .radioButtonsGender label {
     cursor: pointer;
@@ -31,6 +31,10 @@
     background-color: #FFD531;
     transition: 0.3s ease-out all;
     width:100%;
+}
+
+.radioButtonsGender a {
+    color: #000;
 }
 
 
@@ -168,6 +172,10 @@ fieldset {
     background-color: #FF7F50;
     font-size: 2rem;
     text-transform: uppercase;
+}
+
+.submitChange {
+    text-align: center;
 }
 
 
