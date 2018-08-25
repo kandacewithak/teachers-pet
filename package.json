@@ -28,5 +28,8 @@
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "flickity": "^2.1.2"
+  }
 }

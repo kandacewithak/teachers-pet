@@ -161,10 +161,16 @@ header {
   display: flex;
   text-align: center;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  padding: 50px 0; }
 
 .arrow {
-  text-align: center; }
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 50px; }
+
+.arrow a {
+  color: inherit; }
 
 h1 {
   font-size: 8rem;
@@ -183,9 +189,6 @@ p {
   font-size: 2.2rem;
   font-weight: 500; }
 
-.arrow {
-  align-self: flex-end; }
-
 /* GENDER SELECTION SECTION STYLES */
 .genderCatergoryForm {
   display: block;
@@ -195,6 +198,46 @@ p {
 .gender {
   display: flex;
   justify-content: center; }
+
+/* CATEGORY SELECTION SECTION STYLES */
+#categorySection {
+  background-color: #FF7F50; }
+
+.main-carousel {
+  padding: 50px 0; }
+
+.radioButtons {
+  display: flex;
+  flex-direction: column; }
+
+.radioButtons input[type="radio"] {
+  visibility: hidden;
+  height: -1;
+  width: -1; }
+
+.radioButtons label {
+  cursor: pointer;
+  text-align: center;
+  margin: 10px;
+  font-size: 2.5rem; }
+
+.categoryIcon {
+  text-align: center;
+  font-size: 10rem;
+  margin-top: 50px; }
+
+.carousel-cell {
+  width: 33%;
+  /* full width */
+  height: 40vh;
+  /* height of carousel */ }
+
+.flickity-button {
+  background: transparent; }
+
+.flickity-prev-next-button {
+  width: 75px;
+  height: 75px; }
 
 /* GIFT RESULTS CONTAINER STYLES */
 .gifts {

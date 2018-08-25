@@ -15,10 +15,17 @@ header {
     text-align: center;
     flex-direction: column;
     justify-content: center;
+    padding: 50px 0;
 }
 
 .arrow {
     text-align: center;
+    font-size: 4rem;
+    margin-top: 50px;
+}
+
+.arrow a {
+    color: inherit;
 }
 
 h1 {
@@ -41,9 +48,6 @@ p {
     font-weight: 500;
 }
 
-.arrow {
-    align-self: flex-end;
-}
 
 
 

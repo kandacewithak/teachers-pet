@@ -1,10 +1,10 @@
 
 /* GENDER SELECTION SECTION STYLES */
+
 .genderCatergoryForm {
     display: block;
     height: 100vh;
     margin: 0 auto;
-
 }
 
 .gender {
@@ -13,6 +13,55 @@
 }
 
 
+
+/* CATEGORY SELECTION SECTION STYLES */
+#categorySection {
+    background-color: #FF7F50;
+}
+
+.main-carousel {
+    padding: 50px 0;
+}
+
+.radioButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+.radioButtons input[type="radio"] {
+    visibility: hidden;
+    height: -1;
+    width: -1;
+}
+
+.radioButtons label {
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+    font-size: 2.5rem;
+}
+
+.categoryIcon {
+    text-align: center;
+    font-size: 10rem;
+    margin-top: 50px;
+}
+
+// category carousel styles
+
+.carousel-cell {
+    width: 33%; /* full width */
+    height: 40vh; /* height of carousel */
+}
+
+.flickity-button {
+background: transparent;
+}
+
+.flickity-prev-next-button {
+width: 75px;
+height: 75px;
+}
 
 /* GIFT RESULTS CONTAINER STYLES */
 .gifts {
