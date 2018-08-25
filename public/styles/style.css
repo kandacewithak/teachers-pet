@@ -398,6 +398,9 @@ footer {
 .copyright {
   padding-top: 1%; }
 
+.copyright a {
+  color: white; }
+
 .footerSocial a {
   color: white;
   margin: 0 15px; }
