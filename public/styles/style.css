@@ -155,7 +155,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Cutive Mono', monospace; }
+  font-family: 'Raleway', sans-serif; }
 
 h1, h2, h3 {
   margin: 0;
@@ -181,12 +181,16 @@ h2 {
 
 h3 {
   font-size: 1.6rem;
-  font-family: 'Cutive Mono', monospace;
+  font-family: 'Raleway', sans-serif;
   display: inline; }
 
 p {
   font-size: 2.2rem;
-  font-weight: 500; }
+  font-weight: 400; }
+
+label {
+  font-size: 2.2rem;
+  padding: 10px; }
 
 /* GENDER ICONS */
 .fa-mars::before {
@@ -254,16 +258,6 @@ p {
   height: -1px;
   width: -1px; }
 
-/* .radioButtonsGender input[type='submit'] {
-    cursor: pointer;
-    background-color: #403F39;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 10px;
-    transition: all .3s ease-out;
-    width: 220px;
-    padding: 10px;
-} */
 .radioButtonsGender label {
   cursor: pointer;
   vertical-align: middle;
@@ -273,7 +267,7 @@ p {
   width: 250px; }
 
 .radioButtonsGender input[type="radio"]:checked + label {
-  background-color: #FFD531;
+  background-color: #9b9191;
   transition: 0.3s ease-out all;
   width: 100%; }
 
@@ -305,27 +299,28 @@ p {
 
 .radioButtonsCategory {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center; }
 
 .radioButtonsCategory input[type="radio"] {
   visibility: hidden;
   height: -1px;
   width: -1px; }
 
+.radioButtonsCategory input[type="radio"]:checked + label {
+  background-color: #9b9191;
+  transition: 0.3s ease-out all; }
+
 .radioButtonsCategory label {
   cursor: pointer;
   text-align: center;
-  margin: 10px;
-  font-size: 2.5rem; }
-
-.radioButtonsCategory input[type="radio"]:checked + label {
-  background-color: #FFD531;
-  transition: 0.3s ease-out all;
-  width: 100%; }
+  border-radius: 5px;
+  width: 50%;
+  margin: 10px; }
 
 .categoryIcon {
   text-align: center;
-  font-size: 10rem;
+  font-size: 8rem;
   margin-top: 50px; }
 
 .carousel-cell {
@@ -333,8 +328,9 @@ p {
   /* full width */ }
 
 .flickity-prev-next-button {
-  width: 75px;
-  height: 75px; }
+  width: 50px;
+  height: 50px;
+  background: transparent; }
 
 fieldset {
   border: none; }
@@ -396,7 +392,7 @@ fieldset {
 
 #submitChange {
   border: none;
-  margin-top: 50px;
+  margin: 50px 0;
   padding: 20px 70px;
   border-radius: 5px;
   background-color: #FF7F50;

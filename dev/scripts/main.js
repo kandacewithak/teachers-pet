@@ -5,8 +5,8 @@ const app = {};
 app.apiURL = 'https://openapi.etsy.com/v2/listings/active.js';
 app.api_key = '8zdq9j960j81dpfuohsa0pnm';
 
-// let userGender;
-// let userCategory;
+let userGender;
+let userCategory;
 
 // a function for making the ajax request that takes two parameters, gender & category
 app.getUserResult = (gender, category) => {
@@ -72,7 +72,8 @@ app.showResults = function(array){
         const imageDiv = $(`<div class="giftImage${i}">`);
         const image = $('<img>').attr('src', item.Images[0].url_fullxfull).addClass('image' + i);
         imageDiv.append(image);
-        const title = $('<h2>').addClass('itemTitle' + i).html(item.title);
+        const longTitle = (item.title).substr(0,70);
+        const title = $('<h2>').addClass('itemTitle' + i).html(`${longTitle}...`);
         const price = $('<h3>').addClass('itemPrice' + i).html(`$${item.price} USD`);
         const linkDiv = $('<div>').addClass('linkChange' + i);
         const change = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem' + i);
@@ -84,14 +85,20 @@ app.showResults = function(array){
 
         giftPiece.append(imageDiv, title, price, linkDiv);
         $('.giftContainer').append(giftPiece);
+
+      
     });
+
+    const changeButton = $('<div>').addClass('submitChange').append($('<input type="submit" id="submitChange" value="Change All Items">'));
+
+    $('.gifts').append(changeButton);
 };
 
 // form submit
 $('form').on('submit', function(e){
     e.preventDefault();
-    let userGender = $('input[name=gender]:checked').val();
-    let userCategory = $('input[name=category]:checked').val();
+    userGender = $('input[name=gender]:checked').val();
+    userCategory = $('input[name=category]:checked').val();
     app.getUserResult(userGender, userCategory);
 });
 
@@ -113,7 +120,8 @@ $('.giftContainer').on('click', '.changeItem1', function (e) {
     const updatedImageDiv1 = $(`<div class="giftImage1">`);
     const updatedImage1 = $('<img>').attr('src', updatedItem.Images[0].url_fullxfull).addClass('image1');
     updatedImageDiv1.append(updatedImage1);
-    const updatedTitle1 = $('<h2>').addClass('itemTitle1').html(updatedItem.title);
+    const updatedLongTitle1 = (updatedItem.title).substr(0,70);
+    const updatedTitle1 = $('<h2>').addClass('itemTitle1').html(`${updatedLongTitle1}...`);
     const updatedPrice1 = $('<h3>').addClass('itemPrice1').html(`$${updatedItem.price} USD`);
     const linkDiv1 = $('<div>').addClass('linkChange1');
     const updatedChange1 = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem1');
@@ -133,7 +141,8 @@ $('.giftContainer').on('click', '.changeItem2', function (e) {
     const updatedImageDiv2 = $(`<div class="giftImage2">`);
     const updatedImage2 = $('<img>').attr('src', updatedItem.Images[0].url_fullxfull).addClass('image2');
     updatedImageDiv2.append(updatedImage2);
-    const updatedTitle2 = $('<h2>').addClass('itemTitle2').html(updatedItem.title);
+    const updatedLongTitle2 = (updatedItem.title).substr(0,70);
+    const updatedTitle2 = $('<h2>').addClass('itemTitle2').html(`${updatedLongTitle2}...`);
     const updatedPrice2 = $('<h3>').addClass('itemPrice2').html(`$${updatedItem.price} USD`);
     const linkDiv2 = $('<div>').addClass('linkChange2');
     const updatedChange2 = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem2');
@@ -153,7 +162,8 @@ $('.giftContainer').on('click', '.changeItem3', function (e) {
     const updatedImageDiv3 = $(`<div class="giftImage3">`);
     const updatedImage3 =$('<img>').attr('src', updatedItem.Images[0].url_fullxfull).addClass('image3');
     updatedImageDiv3.append(updatedImage3);
-    const updatedTitle3 = $('<h2>').addClass('itemTitle3').html(updatedItem.title);
+    const updatedLongTitle3 = (updatedItem.title).substr(0,70);
+    const updatedTitle3 = $('<h2>').addClass('itemTitle3').html(`${updatedLongTitle3}...`);
     const updatedPrice3 = $('<h3>').addClass('itemPrice3').html(`$${updatedItem.price} USD`);
     const linkDiv3 = $('<div>').addClass('linkChange3');
     const updatedChange3 = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem3');
@@ -168,13 +178,14 @@ $('.giftContainer').on('click', '.changeItem3', function (e) {
 //Bug at momement, it this button refreshes entire page, may not return down to gift items section
  $('#submitChange').on('click', function(e){
     e.preventDefault();
-    app.getUserResult();
+    app.getUserResult(userGender, userCategory);
  });
 
 //flickity jQuery
 $(function() {
     $('.main-carousel').flickity({
-        wrapAround: true
+        wrapAround: true,
+        pageDots: false
     });
 });
 
