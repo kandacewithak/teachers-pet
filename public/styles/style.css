@@ -277,6 +277,8 @@ p {
 
 .labelWrapper {
   display: flex;
+  width: 100%;
+
   justify-content: space-around;
   padding-top: 11%; }
 
@@ -391,6 +393,22 @@ fieldset {
 
 .submitChange {
   text-align: center; }
+
+@media (max-width: 910px) {
+  label {
+    font-size: 1.8rem; }
+  .carousel-cell {
+    width: 33%;
+    /* full width */ }
+  .radioButtonsCategory label {
+    width: 60%;
+    margin: 5px; } }
+
+@media (max-width: 850px) {
+  .giftContainer {
+    flex-direction: column;
+    width: 33%;
+    margin: 0 auto; } }
 
 footer {
   height: 130px;
