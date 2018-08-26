@@ -237,6 +237,9 @@ p {
   padding-top: 60px;
   text-align: center; }
 
+.genderTitle h1 {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
 .radioButtonsGender input[type="radio"] {
   visibility: hidden;
   height: -1px;
@@ -278,7 +281,6 @@ p {
 .labelWrapper {
   display: flex;
   width: 100%;
-
   justify-content: space-around;
   padding-top: 11%; }
 
@@ -385,7 +387,7 @@ fieldset {
 #submitChange {
   border: none;
   margin: 50px 0;
-  padding: 20px 70px;
+  padding: 10px 25px;
   border-radius: 5px;
   background-color: #FF7F50;
   font-size: 2rem;
