@@ -12,17 +12,6 @@
     width: -1px;
 }
 
-/* .radioButtonsGender input[type='submit'] {
-    cursor: pointer;
-    background-color: #403F39;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 10px;
-    transition: all .3s ease-out;
-    width: 220px;
-    padding: 10px;
-} */
-
 .radioButtonsGender label {
     cursor: pointer;
     vertical-align: middle;
@@ -33,15 +22,14 @@
 }
 
 .radioButtonsGender input[type="radio"]:checked + label {
-    background-color: #FFD531;
+    background-color: rgb(155, 145, 145);
     transition: 0.3s ease-out all;
-    width:100%;
+    width: 100%;
 }
 
 .radioButtonsGender a {
     color: #000;
 }
-
 
 /* GENDER SELECTION SECTION STYLES */
 
@@ -78,6 +66,7 @@
 .radioButtonsCategory {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .radioButtonsCategory input[type="radio"] {
@@ -86,35 +75,37 @@
     width: -1px;
 }
 
+.radioButtonsCategory input[type="radio"]:checked + label {
+    background-color: rgb(155, 145, 145);
+    transition: 0.3s ease-out all;
+}
+
 .radioButtonsCategory label {
     cursor: pointer;
     text-align: center;
+    border-radius: 5px;
+    width: 50%;
     margin: 10px;
-    font-size: 2.5rem;
-}
-
-.radioButtonsCategory input[type="radio"]:checked + label {
-    background-color: #FFD531;
-    transition: 0.3s ease-out all;
-    width:100%;
 }
 
 .categoryIcon {
     text-align: center;
-    font-size: 10rem;
+    font-size: 8rem;
     margin-top: 50px;
 }
 
-// category carousel styles
+// CATEGORY CAROUSEL STYLES
 
 .carousel-cell {
     width: 33%; /* full width */
 }
 
 .flickity-prev-next-button {
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
 }
+
 
 fieldset {
     border: none;
@@ -189,7 +180,7 @@ fieldset {
 
 #submitChange {
     border: none;
-    margin-top: 50px;
+    margin: 50px 0;
     padding: 20px 70px;
     border-radius: 5px;
     background-color: #FF7F50;
