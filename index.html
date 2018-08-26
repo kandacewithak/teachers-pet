@@ -13,18 +13,17 @@
 <body>
 
   <header>
-    <div class="wrapper .wrapperHeader">
+    <div class="wrapper">
       <div class="heading">
         <h1>Giftify</h1>
         <p>Curated gifts from Etsy</p>
       </div>
-      <div class="arrow">
+      <div class="arrow arrowHeader">
         <a href="#genderSection"><i class="fas fa-angle-down"></i></a>
       </div>
     </div>
   </header>
 
-  
   <main>
 
     <form class="genderCatergoryForm">
@@ -32,32 +31,36 @@
       <div id="genderSection">
         <h2 class="genderTitle">Who are you shopping for?</h2>
 
+
         <fieldset class="gender">
-          <!-- use flickity carousel here -->
+
           <div class="labelWrapper wrapper">
             <div class="radioButtonContainer">
               <div class="radioButtonsGender">
                 <input type="radio" id="male" name="gender" value="men">
-                <label for="male">Male<i class="fas fa-mars"></i></label>
+                <label for="male">Male<i class="fas fa-mars" aria-hidden></i></label>
               </div>
             </div>
           
             <div class="radioButtonContainer">
               <div class="radioButtonsGender">
                 <input type="radio" id="female" name="gender" value="women">
-                <label for="female">Female<i class="fas fa-venus"></i></label>
+                <label for="female">Female<i class="fas fa-venus" aria-hidden></i></label>
               </div>
             </div>
             
             <div class="radioButtonContainer">
               <div class="radioButtonsGender">
                 <input type="radio" id="both" name="gender" value="both">
-                <label for="both">Both<i class="fas fa-transgender"></i></label>
+                <label for="both">Both<i class="fas fa-transgender" aria-hidden></i></label>
               </div>
             </div>
           </div>
-    
         </fieldset>
+
+        <div class="arrow arrowGender">
+          <a href="#categorySection"><i class="fas fa-angle-down"></i></a>
+        </div>
       </div>
 
       <!-- GENDER FIELDSET END -->
@@ -74,7 +77,7 @@
 
             <div class="carousel-cell radioButtonsCategory">
               <div class="categoryIcon">
-                <i class="fas fa-tshirt"></i>
+                <i class="fas fa-tshirt" aria-hidden></i>
               </div>
               <input type="radio" id="clothing" name="category" value="clothing">
               <label class="label" for="clothing">Clothing</label>
@@ -82,7 +85,7 @@
 
             <div class="carousel-cell radioButtonsCategory">
               <div class="categoryIcon">
-                <i class="fas fa-home"></i>
+                <i class="fas fa-home" aria-hidden></i>
               </div>
               <input type="radio" id="housewares" name="category" value="housewares">
               <label for="housewares">Housewares</label>
@@ -90,7 +93,7 @@
 
             <div class="carousel-cell radioButtonsCategory">
               <div class="categoryIcon">
-                <i class="fas fa-football-ball"></i>
+                <i class="fas fa-football-ball" aria-hidden></i>
               </div>
               <input type="radio" id="toys" name="category" value="toys">
               <label for="toys">Toys</label>
@@ -98,7 +101,7 @@
 
             <div class="carousel-cell radioButtonsCategory">
               <div class="categoryIcon">
-                <i class="far fa-gem"></i>
+                <i class="far fa-gem" aria-hidden></i>
               </div>
               <input type="radio" id="jewellery" name="category" value="jewellery">
               <label for="jewellery">Jewellery</label>
@@ -106,7 +109,7 @@
 
             <div class="carousel-cell radioButtonsCategory">
               <div class="categoryIcon">
-                <i class="fas fa-book"></i>
+                <i class="fas fa-book" aria-hidden></i>
               </div>
               <input type="radio" id="book" name="category" value="books school">
               <label for="book">Books</label>
@@ -114,7 +117,7 @@
 
             <div class="carousel-cell radioButtonsCategory">
               <div class="categoryIcon">
-                <i class="fas fa-palette"></i>
+                <i class="fas fa-palette" aria-hidden></i>
               </div>
               <input type="radio" id="art" name="category" value="art">
               <label for="art">Artwork</label>
@@ -125,6 +128,9 @@
 
         </fieldset>
         <!-- CATERGORY FIELDSET ENDS -->
+        <div class="arrow arrowCategory">
+          <a href="#giftify"><i class="fas fa-angle-down"></i></a>
+        </div>
       </div>
 
       <div class="submit-container">
@@ -138,8 +144,6 @@
         <div class="giftContainer">
         </div> 
       </div>
-
-     
     </section>
 
 
@@ -158,8 +162,6 @@
       <a href="#" target="_blank" alt='facebook'><i class="fab fa-facebook-f"></i></a>
       <a href="#" target="_blank" alt='instagram'><i class="fab fa-instagram"></i></a>
     </div>
-
-
 
   </footer>
 

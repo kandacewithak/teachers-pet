@@ -27,7 +27,6 @@ app.getUserResult = (gender, category) => {
             // after the results are returned, create a new variable for the resulting array
             const resultArray = res.results;
 
-
             // create an empty array for the three random items from Etsy
             app.numberGenerator(resultArray);
             app.globalList = resultArray;
@@ -63,6 +62,7 @@ app.numberGenerator = function (firstArray) {
 app.showResults = function(array){
     // use the forEach method to display item info on page
     $('.giftContainer').empty();
+    $('.submitChange').empty();
     
     let i = 1
 
@@ -86,11 +86,10 @@ app.showResults = function(array){
         giftPiece.append(imageDiv, title, price, linkDiv);
         $('.giftContainer').append(giftPiece);
 
-      
     });
 
+    
     const changeButton = $('<div>').addClass('submitChange').append($('<input type="submit" id="submitChange" value="Change All Items">'));
-
     $('.gifts').append(changeButton);
 };
 
@@ -176,8 +175,9 @@ $('.giftContainer').on('click', '.changeItem3', function (e) {
 
 // REFRSH ALL
 //Bug at momement, it this button refreshes entire page, may not return down to gift items section
- $('#submitChange').on('click', function(e){
+ $('.gifts').on('click', '#submitChange', function(e){
     e.preventDefault();
+    
     app.getUserResult(userGender, userCategory);
  });
 
