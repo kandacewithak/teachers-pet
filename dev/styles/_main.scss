@@ -47,7 +47,7 @@
 
 .labelWrapper {
     display: flex;
-    width: 70%;
+    width: 100%;
     justify-content: space-around;
     padding-top: 11%;
 }
@@ -87,6 +87,9 @@
     width: 50%;
     margin: 10px;
 }
+
+
+
 
 .categoryIcon {
     text-align: center;
@@ -202,3 +205,27 @@ fieldset {
 //     text-align: center;
 //     padding-top:10px;
 // }
+
+@media (max-width: 910px) {
+    label {
+        font-size: 1.8rem;
+    }
+
+    .carousel-cell {
+    width: 33%; /* full width */
+    }
+
+    .radioButtonsCategory label {
+        width: 60%;
+        margin: 5px;
+    }
+
+}
+
+@media (max-width: 850px) {
+    .giftContainer {
+        flex-direction: column;
+        width:33%;
+        margin: 0 auto;
+    }
+}
