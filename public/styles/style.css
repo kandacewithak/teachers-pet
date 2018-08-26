@@ -135,6 +135,21 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   margin: 0 auto;
   max-width: 900px; }
 
+a {
+  text-decoration: black; }
+
+a:visited {
+  text-decoration: black; }
+
+a:hover {
+  text-decoration: black; }
+
+a:focus {
+  text-decoration: black; }
+
+a:hover, a:active {
+  text-decoration: black; }
+
 html {
   font-size: 62.5%; }
 
@@ -246,12 +261,10 @@ p {
   cursor: pointer;
   vertical-align: middle;
   text-align: right;
-  padding: 5px 10px;
-  border-radius: 3px;
-  width: 250px; }
+  padding: 5px 10px; }
 
 .radioButtonsGender input[type="radio"]:checked + label {
-  background-color: #9b9191;
+  border-bottom: 2px solid black;
   transition: 0.3s ease-out all;
   width: 100%; }
 
@@ -265,20 +278,23 @@ p {
   color: #FF7F50;
   transform: scale(1.2); }
 
+.arrowGender, .arrowCategory {
+  padding-bottom: 50px;
+  width: 50%;
+  margin: 0 auto; }
+
 /* GENDER SELECTION SECTION STYLES */
 .genderCatergoryForm {
-  display: block;
   margin: 0 auto; }
 
 .gender {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15%; }
+  margin-bottom: 10%; }
 
 .labelWrapper {
   display: flex;
   width: 100%;
-
   justify-content: space-around;
   padding-top: 11%; }
 
@@ -287,7 +303,7 @@ p {
   background-color: #FF7F50; }
 
 .main-carousel {
-  padding: 50px 0; }
+  padding: 10% 0 6% 0; }
 
 .radioButtonsCategory {
   display: flex;
@@ -300,20 +316,27 @@ p {
   width: -1px; }
 
 .radioButtonsCategory input[type="radio"]:checked + label {
-  background-color: #9b9191;
-  transition: 0.3s ease-out all; }
+  border-bottom: 2px solid black;
+  transition: 0.3s ease-out all;
+  width: 50%; }
 
 .radioButtonsCategory label {
   cursor: pointer;
   text-align: center;
-  border-radius: 5px;
-  width: 50%;
-  margin: 10px; }
+  display: flex;
+  flex-direction: column; }
 
-.categoryIcon {
+.radioButtonsCategory i {
   text-align: center;
   font-size: 8rem;
-  margin-top: 50px; }
+  margin-bottom: 20px; }
+
+.arrowCategory {
+  transition: 0.3s; }
+
+.arrowCategory:hover, .arrowCategory:active {
+  color: white;
+  transform: scale(1.2); }
 
 .carousel-cell {
   width: 33%;
@@ -407,8 +430,22 @@ fieldset {
 @media (max-width: 850px) {
   .giftContainer {
     flex-direction: column;
-    width: 33%;
+    width: 50%;
     margin: 0 auto; } }
+
+@media (max-width: 600px) {
+  .carousel-cell {
+    width: 100%;
+    /* full width */ } }
+
+@media (max-width: 500px) {
+  .labelWrapper {
+    flex-direction: column;
+    align-items: center; }
+  .giftContainer {
+    width: 80%; }
+  .radioButtonContainer {
+    margin: 20px 0; } }
 
 footer {
   height: 130px;

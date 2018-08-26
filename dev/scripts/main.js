@@ -189,6 +189,15 @@ $(function() {
     });
 });
 
+$(function () {
+    console.log("hello");
+  });
+
+  $('a').smoothScroll({
+    offset: -1,
+    speed: 700
+  });
+
 
 
 //User comes to site, starts off with option to select a category (that we have predetermined and given as choices)
