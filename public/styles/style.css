@@ -132,24 +132,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 .wrapper {
-  display: block;
   margin: 0 auto;
   max-width: 900px; }
-
-a {
-  text-decoration: black; }
-
-a:visited {
-  text-decoration: black; }
-
-a:hover {
-  text-decoration: black; }
-
-a:focus {
-  text-decoration: black; }
-
-a:hover, a:active {
-  text-decoration: black; }
 
 html {
   font-size: 62.5%; }
@@ -274,6 +258,13 @@ p {
 .radioButtonsGender a {
   color: #000; }
 
+.arrowHeader, .arrowGender {
+  transition: 0.3s; }
+
+.arrowHeader:hover, .arrowHeader:active, .arrowGender:hover, .arrowGender:active {
+  color: #FF7F50;
+  transform: scale(1.2); }
+
 /* GENDER SELECTION SECTION STYLES */
 .genderCatergoryForm {
   display: block;
@@ -281,12 +272,11 @@ p {
 
 .gender {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 15%; }
 
 .labelWrapper {
   display: flex;
-  width: 70%;
   justify-content: space-around;
   padding-top: 11%; }
 

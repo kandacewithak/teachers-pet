@@ -30,6 +30,14 @@
 .radioButtonsGender a {
     color: #000;
 }
+.arrowHeader, .arrowGender {
+    transition: 0.3s;
+}
+
+.arrowHeader:hover, .arrowHeader:active, .arrowGender:hover, .arrowGender:active {
+    color: #FF7F50;
+    transform: scale(1.2);
+}
 
 /* GENDER SELECTION SECTION STYLES */
 
@@ -41,13 +49,12 @@
 
 .gender {   
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 15%;
 }
 
 .labelWrapper {
     display: flex;
-    width: 70%;
     justify-content: space-around;
     padding-top: 11%;
 }
@@ -175,7 +182,7 @@ fieldset {
 }
 
 .submitChange {
-   text-align: center;
+    text-align: center;
 }
 
 #submitChange {
