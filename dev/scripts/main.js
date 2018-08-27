@@ -90,7 +90,7 @@ app.showResults = function(array){
 
     });
     
-    const changeButton = $('<div>').addClass('submitChange').append($('<h2 class="giftifyHeading">Here are the gifts we’ve curated for you</h2>')).append($('<input type="submit" id="submitChange" value="Change All Items">'));
+    const changeButton = $('<div>').addClass('submitChange').append($('<h2 class="giftifyHeading">Here are the gift items we’ve curated for you</h2>')).append($('<input type="submit" id="submitChange" value="Change All Items">'));
     $('.gifts').append(changeButton);
     };
 
