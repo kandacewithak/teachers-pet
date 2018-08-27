@@ -208,6 +208,11 @@ p.clickHere {
 .fa-transgender::before {
   font-size: 100px; }
 
+/* GIFTIFY HEADING TITLE */
+h2.giftifyHeading {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300; }
+
 /* FOOTER SOCIAL MEDIA ICONS */
 .footerSocial {
   font-size: 1.8rem; }
