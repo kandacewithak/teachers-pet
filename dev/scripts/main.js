@@ -80,7 +80,7 @@ app.showResults = function(array){
         const linkDiv = $('<div>').addClass('linkChange' + i);
         const change = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem' + i);
         // link item button here instead of input
-        const linkToItem = $('<a>').attr('href', item.url).attr('id', "linkItem" + i).html('<i class="fas fa-external-link-alt">');
+        const linkToItem = $('<a>').attr('href', item.url).attr('id', "linkItem" + i).attr('target', '_blank').html('<i class="fas fa-external-link-alt">');
         linkDiv.append(change, linkToItem);
 
         i++
@@ -125,7 +125,7 @@ $('.giftContainer').on('click', '.changeItem1', function (e) {
     const updatedPrice1 = $('<h3>').addClass('itemPrice1').html(`$${updatedItem.price} USD`);
     const linkDiv1 = $('<div>').addClass('linkChange1');
     const updatedChange1 = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem1');
-    const linkToItem1 = $('<a>').attr('href', updatedItem.url).attr('id', "linkItem1").html('<i class="fas fa-external-link-alt">');
+    const linkToItem1 = $('<a>').attr('href', updatedItem.url).attr('id', "linkItem1").attr('target', '_blank').html('<i class="fas fa-external-link-alt">');
     linkDiv1.append(updatedChange1, linkToItem1);
 
     $('.giftResult1').append(updatedImageDiv1, updatedTitle1, updatedPrice1, linkDiv1);
@@ -146,7 +146,7 @@ $('.giftContainer').on('click', '.changeItem2', function (e) {
     const updatedPrice2 = $('<h3>').addClass('itemPrice2').html(`$${updatedItem.price} USD`);
     const linkDiv2 = $('<div>').addClass('linkChange2');
     const updatedChange2 = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem2');
-    const linkToItem2 = $('<a>').attr('href', updatedItem.url).attr('id', "linkItem2").html('<i class="fas fa-external-link-alt">');
+    const linkToItem2 = $('<a>').attr('href', updatedItem.url).attr('id', "linkItem2").attr('target', '_blank').html('<i class="fas fa-external-link-alt">');
     linkDiv2.append(updatedChange2, linkToItem2);
 
     $('.giftResult2').append(updatedImageDiv2, updatedTitle2, updatedPrice2, linkDiv2);
@@ -167,7 +167,7 @@ $('.giftContainer').on('click', '.changeItem3', function (e) {
     const updatedPrice3 = $('<h3>').addClass('itemPrice3').html(`$${updatedItem.price} USD`);
     const linkDiv3 = $('<div>').addClass('linkChange3');
     const updatedChange3 = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem3');
-    const linkToItem3 = $('<a>').attr('href', updatedItem.url).attr('id', "linkItem3").html('<i class="fas fa-external-link-alt">');
+    const linkToItem3 = $('<a>').attr('href', updatedItem.url).attr('id', "linkItem3").attr('target', '_blank').html('<i class="fas fa-external-link-alt">');
     linkDiv3.append(updatedChange3, linkToItem3);
 
     $('.giftResult3').append(updatedImageDiv3, updatedTitle3, updatedPrice3, linkDiv3);
