@@ -21,3 +21,12 @@ footer {
     color: white;
     margin: 0 15px;
 }
+
+.footerSocial i {
+    transition: 0.3s;
+}
+
+.footerSocial i:hover {
+    transform: scale(1.2);
+    color: #FF7F50;
+}

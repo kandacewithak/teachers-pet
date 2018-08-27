@@ -7,8 +7,7 @@
 }
 
 .genderTitle h1 {
-     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .radioButtonsGender input[type="radio"]{
@@ -46,7 +45,6 @@
     padding-bottom: 50px;
     width: 50%;
     margin: 0 auto;
-
 }
 
 /* GENDER SELECTION SECTION STYLES */
@@ -95,7 +93,7 @@
 .radioButtonsCategory input[type="radio"]:checked + label {
     border-bottom: 2px solid black;
     transition: 0.3s ease-out all;
-    width: 50%;
+    width: 60%;
 }
 
 .radioButtonsCategory label {
@@ -106,7 +104,6 @@
 }
 
 .radioButtonsCategory i {
-    // display: inline-block;
     text-align: center;
     font-size: 8rem;
     margin-bottom: 20px;
@@ -133,7 +130,6 @@
     background: transparent;
 }
 
-
 fieldset {
     border: none;
 }
@@ -148,8 +144,16 @@ fieldset {
     padding: 20px 100px;
     border-radius: 5px;
     background-color: #FF7F50;
+    border: 3px solid #FF7F50;
     font-size: 2rem;
+    font-weight: 500;
     text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+}
+
+#giftify:hover {
+    border: 3px solid black;
 }
 
 /* GIFT RESULTS CONTAINER STYLES */
@@ -158,7 +162,9 @@ fieldset {
 .gifts {
     margin-top: 20px;
 }
+
 .gifts h2 {
+    margin-top: 10px;
     font-size: 1.4rem;
 }
 
@@ -180,13 +186,30 @@ fieldset {
     height: 300px;
 }
 
+.gifts i {
+    transition: 0.3s;
+}
+
+.gifts i:hover {
+    transform: scale(1.2);
+    color: #FF7F50;
+}
+
 #changeItem {
-    width: 40%;
+    width: 50%;
     border: none;
     border-radius: 5px;
     background-color: #FF7F50;
-    color: white;
-    padding: 10px;
+    color: #252424;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: 3px solid #FF7F50;
+    transition: 0.3s;
+}
+
+#changeItem:hover {
+    border: 3px solid black;
 }
 
 #linkItem1, #linkItem2, #linkItem3 {
@@ -201,6 +224,10 @@ fieldset {
     justify-content: space-between;
 }
 
+.gifts h3 {
+    margin-top: 20px;
+}
+
 .submitChange {
     text-align: center;
 }
@@ -208,27 +235,30 @@ fieldset {
 #submitChange {
     border: none;
     margin: 50px 0;
-    padding: 10px 25px;
+    padding: 15px 25px;
     border-radius: 5px;
     background-color: #FF7F50;
     font-size: 2rem;
-    text-transform: uppercase;
+    border: 3px solid #FF7F50;
+    transition: 0.3s;
+    letter-spacing: 1.5px;
 }
 
-.submitChange {
-    text-align: center;
+#submitChange:hover {
+    border: 3px solid black;
+}
+
+.gifts .giftifyHeading {
+    font-size: 2.2rem;
+    border-bottom: 2px solid #FF7F50;
+    border-top: 2px solid #FF7F50;
+    width: 35%;
+    padding: 5px;
+    margin: 0 auto;
 }
 
 
-//how to  make the border transition on hover or selection
-// .radioButtonContainer {
-//     height: 30%;
-//     border: 2px solid  #fc4b2a;
-//     border-radius: 50%;
-//     width: 28%;
-//     text-align: center;
-//     padding-top:10px;
-// }
+
 
 @media (max-width: 910px) {
     label {
