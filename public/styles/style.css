@@ -191,6 +191,10 @@ label {
   font-size: 2.2rem;
   padding: 10px; }
 
+/* CLICK HERE */
+p.clickHere {
+  font-size: 1.5rem; }
+
 /* GENDER ICONS */
 .fa-mars::before {
   font-size: 100px; }
@@ -220,7 +224,7 @@ header {
   text-align: center;
   flex-direction: column;
   justify-content: center;
-  padding: 50px 0; }
+  padding: 95px 0; }
 
 .arrow {
   text-align: center;
@@ -247,13 +251,15 @@ p {
   font-size: 2.2rem;
   font-weight: 500; }
 
+p.clickHere {
+  display: block;
+  padding-top: 44%;
+  margin: 1%; }
+
 /* RADIOBUTTON LABEL STYLING */
 .genderTitle {
   padding-top: 60px;
   text-align: center; }
-
-.genderTitle h1 {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
 .radioButtonsGender input[type="radio"] {
   visibility: hidden;
@@ -267,12 +273,13 @@ p {
   padding: 5px 10px; }
 
 .radioButtonsGender input[type="radio"]:checked + label {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #252424;
   transition: 0.3s ease-out all;
-  width: 100%; }
+  width: 100%;
+  text-shadow: 2px 2px 10px #FF7F50; }
 
 .radioButtonsGender a {
-  color: #000; }
+  color: #252424; }
 
 .arrowHeader, .arrowGender {
   transition: 0.3s; }
@@ -319,9 +326,10 @@ p {
   width: -1px; }
 
 .radioButtonsCategory input[type="radio"]:checked + label {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #252424;
   transition: 0.3s ease-out all;
-  width: 60%; }
+  width: 60%;
+  text-shadow: 4px 10px 50px #fff; }
 
 .radioButtonsCategory label {
   cursor: pointer;
@@ -354,7 +362,8 @@ fieldset {
   border: none; }
 
 .submit-container {
-  text-align: center; }
+  text-align: center;
+  margin: 20% 0; }
 
 #giftify {
   border: none;
@@ -455,6 +464,16 @@ fieldset {
   padding: 5px;
   margin: 0 auto; }
 
+#giftify {
+  background-color: white; }
+
+#giftify:hover {
+  background-color: #FF7F50; }
+
+#giftify:active {
+  transform: scale(1.1);
+  transition: transform 0.5s; }
+
 @media (max-width: 910px) {
   label {
     font-size: 1.8rem; }
@@ -487,7 +506,7 @@ fieldset {
 
 footer {
   height: 130px;
-  background-color: #000;
+  background-color: #252424;
   color: white;
   display: block;
   text-align: center;
