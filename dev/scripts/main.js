@@ -63,6 +63,8 @@ app.showResults = function(array){
     // use the forEach method to display item info on page
     $('.giftContainer').empty();
     $('.submitChange').empty();
+
+
     
     let i = 1
 
@@ -87,11 +89,10 @@ app.showResults = function(array){
         $('.giftContainer').append(giftPiece);
 
     });
-
     
-    const changeButton = $('<div>').addClass('submitChange').append($('<input type="submit" id="submitChange" value="Change All Items">'));
+    const changeButton = $('<div>').addClass('submitChange').append($('<h2 class="giftifyHeading">Here are the gifts we’ve curated for you</h2>')).append($('<input type="submit" id="submitChange" value="Change All Items">'));
     $('.gifts').append(changeButton);
-};
+    };
 
 // form submit
 $('form').on('submit', function(e){
