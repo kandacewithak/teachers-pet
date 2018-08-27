@@ -301,6 +301,11 @@ fieldset {
         width: 50%;
         margin: 0 auto;
     }
+
+    .gifts .giftifyHeading {
+        margin-top: 2%;
+        width:50%
+    }
 }
 
 @media (max-width: 600px) {
@@ -311,6 +316,10 @@ fieldset {
 }
 
 @media (max-width: 500px) {
+    h2.genderTitle {
+        font-size: 2.2rem;
+    }
+
     .labelWrapper {
     flex-direction: column;
     align-items: center;
@@ -322,5 +331,11 @@ fieldset {
 
     .radioButtonContainer {
         margin: 20px 0;
+    }
+
+    .gifts .giftifyHeading {
+        margin-top: 5%;
+        width: 80%;
+        font-size: 1.6rem;
     }
 }
