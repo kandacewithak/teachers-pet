@@ -21,7 +21,7 @@ gulp.task('js', () => {
     browserify('./dev/scripts/main.js', { debug: true })
         .transform('babelify', {
             sourceMaps: true,
-            presets: ['env']
+            presets: ["@babel/preset-env"]
         })
         .bundle()
         .on('error', notify.onError({

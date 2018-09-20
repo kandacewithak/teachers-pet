@@ -76,7 +76,7 @@ app.showResults = function(array){
         imageDiv.append(image);
         const price = $('<h3>').addClass('itemPrice' + i).html(`$${item.price} USD`);
         const linkDiv = $('<div>').addClass('linkChange' + i);
-        const change = $('<input type="submit" id="changeItem" value="Change Item">').addClass('changeItem' + i);
+        const change = $('<input type="submit" id="changeItem" value="Different Gift">').addClass('changeItem' + i);
         // link item button here instead of input
         const linkToItem = $('<a>').attr('href', item.url).attr('id', "linkItem" + i).attr('target', '_blank').html('<i class="fas fa-link"></i>');
         linkDiv.append(change, linkToItem);
@@ -172,7 +172,7 @@ $('.giftContainer').on('click', '.changeItem3', function (e) {
 
 // REFRESH ALL
 
-    $('.gifts').on('click', '#submitChange', function(e){
+    $('.giftIdeas').on('click', '#submitChange', function(e){
         e.preventDefault();
         app.getUserResult(teacherCategory);
     });
