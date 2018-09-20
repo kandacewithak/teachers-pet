@@ -154,33 +154,23 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Josefin Slab', serif; }
 
 h1, h2, h3 {
   margin: 0;
   padding: 0;
-  font-family: 'Playfair Display', serif; }
+  font-family: 'Lato', sans-serif; }
 
 h1 {
-  color: #fc4b2a;
   font-size: 8rem;
   letter-spacing: 2px;
   font-weight: 500; }
-
-h1::after {
-  content: '';
-  display: block;
-  width: 150px;
-  height: 2px;
-  background-color: #fc4b2a;
-  margin: 20px auto; }
 
 h2 {
   font-size: 3rem; }
 
 h3 {
   font-size: 1.6rem;
-  font-family: 'Raleway', sans-serif;
   display: inline; }
 
 p {
@@ -191,26 +181,8 @@ label {
   font-size: 2.2rem;
   padding: 10px; }
 
-/* CLICK HERE */
-p.clickHere {
-  font-size: 1.5rem; }
-
-/* GENDER ICONS */
-.fa-mars::before {
-  font-size: 100px; }
-
-.fa-mars::before {
-  font-size: 100px; }
-
-.fa-venus::before {
-  font-size: 100px; }
-
-.fa-transgender::before {
-  font-size: 100px; }
-
 /* GIFTIFY HEADING TITLE */
 h2.giftifyHeading {
-  font-family: 'Raleway', sans-serif;
   font-weight: 300; }
 
 /* FOOTER SOCIAL MEDIA ICONS */
@@ -218,107 +190,73 @@ h2.giftifyHeading {
   font-size: 1.8rem; }
 
 header {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url(../assets/bg1.jpeg);
+  background-image: url(../assets/background.jpg);
   height: 100vh;
-  background-size: cover;
-  display: flex;
-  align-items: center; }
+  background-size: cover; }
 
 .heading {
   display: flex;
-  text-align: center;
   flex-direction: column;
-  justify-content: center;
-  padding: 95px 0; }
-
-.arrow {
-  text-align: center;
-  font-size: 4rem;
-  margin-top: 50px; }
-
-.arrow a {
-  color: inherit; }
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-left: 125px;
+  height: 80vh; }
 
 h1 {
   font-size: 8rem;
   letter-spacing: 2px;
   font-weight: 500; }
 
-h1::after {
+.pet::after {
   content: '';
   display: block;
   width: 150px;
-  height: 2px;
-  background-color: #fc4b2a;
+  height: 5px;
+  background-color: #f3be2c;
   margin: 20px auto; }
 
 p {
   font-size: 2.2rem;
-  font-weight: 500; }
+  font-weight: 600; }
 
-p.clickHere {
+.heading span {
+  border-bottom: 3px solid #f3be2c; }
+
+.arrow {
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 40px; }
+
+.arrow a {
+  color: inherit; }
+
+.clickHere {
   display: block;
-  padding-top: 44%;
-  margin: 1%; }
+  font-size: 1.5rem; }
 
-/* RADIOBUTTON LABEL STYLING */
-.genderTitle {
-  padding-top: 60px;
-  text-align: center; }
-
-.radioButtonsGender input[type="radio"] {
-  visibility: hidden;
-  height: -1px;
-  width: -1px; }
-
-.radioButtonsGender label {
-  cursor: pointer;
-  vertical-align: middle;
-  text-align: right;
-  padding: 5px 10px; }
-
-.radioButtonsGender input[type="radio"]:checked + label {
-  border-bottom: 2px solid #252424;
-  transition: 0.3s ease-out all;
-  width: 100%;
-  text-shadow: 2px 2px 10px #FF7F50; }
-
-.radioButtonsGender a {
-  color: #252424; }
-
-.arrowHeader, .arrowGender {
+.arrowHeader {
   transition: 0.3s; }
 
-.arrowHeader:hover, .arrowHeader:active, .arrowGender:hover, .arrowGender:active {
-  color: #FF7F50;
+.arrowHeader:hover, .arrowHeader:active {
+  color: #f3be2c;
   transform: scale(1.2); }
 
-.arrowGender, .arrowCategory {
-  padding-bottom: 50px;
-  width: 50%;
-  margin: 0 auto; }
-
-/* GENDER SELECTION SECTION STYLES */
-.genderCatergoryForm {
-  margin: 0 auto; }
-
-.gender {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10%; }
-
-.labelWrapper {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  padding-top: 11%; }
-
-/* CATEGORY SELECTION SECTION STYLES */
 #categorySection {
-  background-color: #FF7F50; }
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.7)), url(../assets/background-2.jpg);
+  background-size: cover;
+  height: 100vh; }
 
-.main-carousel {
-  padding: 10% 0 6% 0; }
+#categorySection h2 {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 4rem;
+  letter-spacing: 2px; }
+
+#categorySection span {
+  border-bottom: 4px solid #f3be2c; }
+
+fieldset {
+  border: none; }
 
 .radioButtonsCategory {
   display: flex;
@@ -330,52 +268,41 @@ p.clickHere {
   height: -1px;
   width: -1px; }
 
-.radioButtonsCategory input[type="radio"]:checked + label {
-  border-bottom: 2px solid #252424;
-  transition: 0.3s ease-out all;
-  width: 60%;
-  text-shadow: 4px 10px 50px #fff; }
-
 .radioButtonsCategory label {
   cursor: pointer;
   text-align: center;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: 600; }
+
+.radioButtonsCategory input[type="radio"]:checked + label {
+  transform: scale(1.2); }
 
 .radioButtonsCategory i {
   text-align: center;
   font-size: 8rem;
   margin-bottom: 20px; }
 
-.arrowCategory {
-  transition: 0.3s; }
-
-.arrowCategory:hover, .arrowCategory:active {
-  color: white;
-  transform: scale(1.2); }
+.main-carousel {
+  padding: 100px 0; }
 
 .carousel-cell {
-  width: 33%;
-  /* full width */ }
+  width: 33%; }
 
 .flickity-prev-next-button {
   width: 50px;
   height: 50px;
   background: transparent; }
 
-fieldset {
-  border: none; }
-
 .submit-container {
   text-align: center;
   margin: 100px 0; }
 
-#giftify {
+#gifts {
   border: none;
   padding: 20px 100px;
   border-radius: 5px;
-  background-color: #FF7F50;
-  border: 3px solid #FF7F50;
   font-size: 2rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -412,14 +339,12 @@ fieldset {
   transition: 0.3s; }
 
 .gifts i:hover {
-  transform: scale(1.2);
-  color: #FF7F50; }
+  transform: scale(1.2); }
 
 #changeItem {
   width: 50%;
   border: none;
   border-radius: 5px;
-  background-color: #FF7F50;
   color: #252424;
   padding: 15px 20px;
   font-size: 1.2rem;
@@ -451,9 +376,7 @@ fieldset {
   margin: 50px 0;
   padding: 15px 25px;
   border-radius: 5px;
-  background-color: #FF7F50;
   font-size: 2rem;
-  border: 3px solid #FF7F50;
   transition: 0.3s;
   letter-spacing: 1.5px; }
 
@@ -462,8 +385,6 @@ fieldset {
 
 .gifts .giftifyHeading {
   font-size: 2.2rem;
-  border-bottom: 2px solid #FF7F50;
-  border-top: 2px solid #FF7F50;
   width: 35%;
   padding: 5px;
   margin: 0 auto; }
@@ -503,8 +424,6 @@ fieldset {
     /* full width */ } }
 
 @media (max-width: 500px) {
-  h2.genderTitle {
-    font-size: 2.2rem; }
   .labelWrapper {
     flex-direction: column;
     align-items: center; }

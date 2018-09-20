@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Project Four</title>
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway:400,500" rel="stylesheet">
+  <title>Teacher's Pet</title>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:400,500,600|Lato:400,500" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.2/flickity.min.css">
@@ -15,148 +16,126 @@
 
 <body>
 
+  <!-- header of the page -->
+
   <header>
+
+  <!-- header wrapper -->
+
     <div class="wrapper">
+
+  <!-- main heading -->
+
       <div class="heading">
-        <h1>Giftify</h1>
-        <p>Curated gifts from Etsy</p>
-        <p class="clickHere">Click the arrow to get started</p>
+        <h1>Teacher's</h1>
+        <h1 class="pet">Pet</h1>
+        <p>Do you love your teacher but you don't know what to get them to say, "<span>Thank You</span>"?</p>
+        <p>Teacher's Pet provides you with curated teacher gift ideas from Etsy!</p>
       </div>
+
+  <!-- arrow navigation -->
+
       <div class="arrow arrowHeader">
-        <a href="#genderSection">
+        <p class="clickHere">Let's get started!</p>
+        <a href="#categorySection">
           <i class="fas fa-angle-down"></i>
         </a>
       </div>
+
     </div>
+
   </header>
+
+  <!-- end of header -->
+
+  <!-- main section of the page -->
 
   <main>
 
-    <form class="genderCatergoryForm">
+    <!-- category section of the page -->
+      
+    <section id="categorySection">
 
-      <div id="genderSection">
-        <h2 class="genderTitle">Who are you shopping for?</h2>
+      <h2>Which of your <span>teachers</span> are you shopping for?</h2>
+      
+    <!-- beginning of the form -->
 
-
-        <fieldset class="gender">
-
-          <div class="labelWrapper wrapper">
-            
-            <div class="radioButtonContainer">
-              <div class="radioButtonsGender">
-                <input type="radio" id="male" name="gender" value="men">
-                <label for="male">Male
-                  <i class="fas fa-mars" aria-hidden></i>
-                </label>
-              </div>
-            </div>
-
-            <div class="radioButtonContainer">
-              <div class="radioButtonsGender">
-                <input type="radio" id="female" name="gender" value="women">
-                <label for="female">Female
-                  <i class="fas fa-venus" aria-hidden></i>
-                </label>
-              </div>
-            </div>
-
-            <div class="radioButtonContainer">
-              <div class="radioButtonsGender">
-                <input type="radio" id="both" name="gender" value="both">
-                <label for="both">Both
-                  <i class="fas fa-transgender" aria-hidden></i>
-                </label>
-              </div>
-            </div>
-          </div>
-        </fieldset>
-
-        <div class="arrow arrowGender">
-          <a href="#categorySection">
-            <i class="fas fa-angle-down"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- GENDER FIELDSET END -->
-
-
-      <!-- CATERGORY FIELDSET STARTS -->
-      <div id="categorySection">
-        <h2 class="genderTitle">What are you shopping for?</h2>
+      <form>
 
         <fieldset class="category">
 
           <!-- category carousel starts here -->
+
           <div class="main-carousel wrapper">
 
             <div class="carousel-cell radioButtonsCategory">
-              <input type="radio" id="clothing" name="category" value="clothing">
-              <label class="label" for="clothing">
-                  <i class="fas fa-tshirt" aria-hidden></i>
-                  Clothing
-              </label>
-            </div>
-
-            <div class="carousel-cell radioButtonsCategory">
-              <input type="radio" id="housewares" name="category" value="housewares">
-              <label for="housewares">
-                  <i class="fas fa-home" aria-hidden></i>
-                  Housewares
-              </label>
-            </div>
-
-            <div class="carousel-cell radioButtonsCategory">
-              <input type="radio" id="toys" name="category" value="toys">
-              <label for="toys">
-                <i class="fas fa-football-ball" aria-hidden></i>
-                Toys
-              </label>
-            </div>
-
-            <div class="carousel-cell radioButtonsCategory">
-              <input type="radio" id="jewellery" name="category" value="jewellery">
-              <label for="jewellery">
-                <i class="far fa-gem" aria-hidden></i>
-                Jewellery
-              </label>
-            </div>
-
-            <div class="carousel-cell radioButtonsCategory">
-              <input type="radio" id="book" name="category" value="book journal">
-              <label for="book">
-                <i class="fas fa-book" aria-hidden></i>
-                Books
+              <input type="radio" id="math" name="category" value="math">
+              <label class="label" for="math">
+                  <i class="fas fa-divide" aria-hidden></i>
+                  Math Teacher
               </label>
             </div>
 
             <div class="carousel-cell radioButtonsCategory">
               <input type="radio" id="art" name="category" value="art">
               <label for="art">
-                <i class="fas fa-palette" aria-hidden></i>
-                Artwork
+                  <i class="fas fa-palette" aria-hidden></i>
+                  Art Teacher
+              </label>
+            </div>
+
+            <div class="carousel-cell radioButtonsCategory">
+              <input type="radio" id="science" name="category" value="science" >
+              <label for="science" >
+                  <i class="fas fa-flask" aria-hidden></i>
+                Science Teacher
+              </label>
+            </div>
+
+            <div class="carousel-cell radioButtonsCategory">
+              <input type="radio" id="drama" name="category" value="drama">
+              <label for="drama">
+                  <i class="fas fa-theater-masks" aria-hidden></i>
+                Drama Teacher
+              </label>
+            </div>
+
+            <div class="carousel-cell radioButtonsCategory">
+              <input type="radio" id="english" name="category" value="english">
+              <label for="english">
+                <i class="fas fa-book" aria-hidden></i>
+                English Teacher
+              </label>
+            </div>
+
+            <div class="carousel-cell radioButtonsCategory">
+              <input type="radio" id="music" name="category" value="music">
+              <label for="music">
+                <i class="fas fa-music" aria-hidden></i>
+                Music Teacher
               </label>
             </div>
 
           </div>
+
           <!-- category carousel ends here -->
 
         </fieldset>
-        <!-- CATERGORY FIELDSET ENDS -->
-        <div class="arrow arrowCategory">
-          <a href="#giftify">
-            <i class="fas fa-angle-down"></i>
-          </a>
+  
+
+        <div class="submit-container">
+          <a href="#gifts"></a>
+          <input type="submit" id="gifts" value="Show me some gifts">
         </div>
-      </div>
 
-      <div class="submit-container">
-        <a href="#gifts"></a>
-        <input type="submit" id="giftify" value="Giftify">
-      
-      </div>
+      </form>
+    
+    </section>
 
-    </form>
+    <!-- end of category selection section -->
+
+
+    <!-- gift section to display results -->
 
     <section class="gifts" id="gifts">
       <div class="wrapper">
@@ -165,8 +144,11 @@
       </div>
     </section>
 
-
   </main>
+
+  <!-- end of the main section of the page -->
+
+  <!-- footer section of the page -->
 
   <footer>
 

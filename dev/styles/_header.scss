@@ -2,30 +2,18 @@
 // HEADER STYLES
 
 header {
-    background-image: linear-gradient(to right, rgba(255,255,255,0.3),
-    rgba(255,255,255,0.7)), url(../assets/bg1.jpeg);
+    background-image: url(../assets/background.jpg);
     height: 100vh;
     background-size: cover;
-    display: flex;
-    align-items: center;
 }
 
 .heading {
     display: flex;
-    text-align: center;
     flex-direction: column;
-    justify-content: center;
-    padding: 95px 0;
-}
-
-.arrow {
-    text-align: center;
-    font-size: 4rem;
-    margin-top: 50px;
-}
-
-.arrow a {
-    color: inherit;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-left: 125px;
+    height: 80vh;
 }
 
 h1 {
@@ -34,24 +22,46 @@ h1 {
     font-weight: 500;
 }
 
-h1::after {
+.pet::after {
     content:'';
     display: block;
     width: 150px;
-    height: 2px;
-    background-color: #fc4b2a;
+    height: 5px;
+    background-color: #f3be2c;
     margin: 20px auto;
 }
 
 p {
     font-size: 2.2rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
-p.clickHere {
+.heading span {
+    border-bottom: 3px solid #f3be2c;
+}
+
+.arrow {
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 40px;
+}
+
+.arrow a {
+    color: inherit;
+}
+
+.clickHere {
     display: block;
-    padding-top:44%;
-    margin:1%;
+    font-size: 1.5rem;
+}
+
+.arrowHeader {
+    transition: 0.3s;
+}
+
+.arrowHeader:hover, .arrowHeader:active {
+    color: #f3be2c;
+    transform: scale(1.2);
 }
 
 

@@ -2,31 +2,20 @@ html {
     font-size: 62.5%;
 }
 
-
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Josefin Slab', serif;
 }
 
 h1, h2, h3 {
     margin:0;
     padding:0;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Lato', sans-serif;
 }
 
 h1 {
-    color: #fc4b2a;
     font-size: 8rem;
     letter-spacing: 2px;
     font-weight: 500;
-}
-
-h1::after {
-    content:'';
-    display: block;
-    width: 150px;
-    height: 2px;
-    background-color: #fc4b2a;
-    margin: 20px auto;
 }
 
 h2 {
@@ -35,7 +24,6 @@ h2 {
 
 h3 {
     font-size: 1.6rem;
-    font-family: 'Raleway', sans-serif;
     display: inline;
 }
 
@@ -49,37 +37,11 @@ label {
     padding: 10px;
 }
 
-/* CLICK HERE */
-p.clickHere {
-    font-size: 1.5rem;
-}
-
-
-/* GENDER ICONS */
-.fa-mars::before {
-    font-size: 100px;
-}
-
-
-.fa-mars::before {
-    font-size: 100px;
-}
-
-
-.fa-venus::before {
-    font-size: 100px;
-}
-
-.fa-transgender::before {
-    font-size: 100px;
-}
 
 /* GIFTIFY HEADING TITLE */
 h2.giftifyHeading {
-    font-family: 'Raleway', sans-serif;
     font-weight: 300;
 }
-
 
 
 /* FOOTER SOCIAL MEDIA ICONS */
