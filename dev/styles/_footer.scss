@@ -1,32 +1,12 @@
 footer {
-    height: 130px;
     background-color: #252424;
     color: white;
-    display: block;
     text-align: center;
+    padding: 25px;
+}
+
+footer h4 {
+    margin: 0;
     font-size: 1.8rem;
     letter-spacing: 2px;
-    padding-bottom: 10px;
-}
-
-.copyright {
-    padding-top: 1%;
-}
-
-.copyright a {
-    color: white;
-}
-
-.footerSocial a {
-    color: white;
-    margin: 0 15px;
-}
-
-.footerSocial i {
-    transition: 0.3s;
-}
-
-.footerSocial i:hover {
-    transform: scale(1.2);
-    color: #FF7F50;
 }

@@ -1,17 +1,17 @@
 
+
 // CATEGORY SECTION STYLES
 
 #categorySection {
-    background: linear-gradient(to bottom right, rgba(255,255,255,0.4), rgba(255,255,255,0.7)), url(../assets/background-2.jpg);
+    background: linear-gradient(to bottom right, rgba(255,255,255,0.6), rgba(255,255,255,0.9)), url(../assets/background-2.jpg);
     background-size: cover;
-    height: 100vh;
 }
 
 #categorySection h2 {
-    padding-top: 50px;
+    padding-top: 100px;
     text-align: center;
-    font-size: 4rem;
     letter-spacing: 2px;
+    font-family: 'Josefin Slab', serif;
 }
 
 #categorySection span {
@@ -22,10 +22,21 @@ fieldset {
     border: none;
 }
 
+.categoryWrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+// category section radio/select buttons and labels
+
 .radioButtonsCategory {
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .radioButtonsCategory input[type="radio"] {
@@ -44,8 +55,12 @@ fieldset {
 }
 
 .radioButtonsCategory input[type="radio"]:checked + label {
-    // border-bottom: 2px solid #252424;
+    transition: 0.6s;
+}
+
+.radioButtonsCategory input[type="radio"]:checked + label {
     transform: scale(1.2);
+    color: #f3be2c;
 }
 
 .radioButtonsCategory i {
@@ -54,54 +69,43 @@ fieldset {
     margin-bottom: 20px;
 }
 
-
-// CATEGORY CAROUSEL STYLES
-
-.main-carousel {
-    padding: 100px 0;
-}
-
-.carousel-cell {
-    width: 33%; 
-}
-
-.flickity-prev-next-button {
-    width: 50px;
-    height: 50px;
-    background: transparent;
-}
-
-
+// submit choices button and container
 
 .submit-container {
     text-align: center;
-    margin: 100px 0;
+    padding: 50px 0;
 }
 
-#gifts {
+#gifts, #submitChange {
     border: none;
-    padding: 20px 100px;
+    padding: 20px 50px;
     border-radius: 5px;
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 1.6rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    transition: 0.3s;
+    transition: 0.6s;
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+    margin-bottom: 50px;
 }
 
-#giftify:hover {
-    border: 3px solid black;
+#gifts:hover, #submitChange:hover {
+    background-color: #f3be2c;
 }
 
-/* GIFT RESULTS CONTAINER STYLES */
 
-.gifts {
-    margin-top: 20px;
-}
+/* GIFT RESULTS STYLES*/
 
-.gifts h2 {
-    margin-top: 10px;
-    font-size: 1.4rem;
+.giftContainer h2 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 4px solid #f3be2c;
+    width: 60%;
+    margin: 10px auto;
+    letter-spacing: 1px;
 }
 
 .giftContainer {
@@ -111,7 +115,7 @@ fieldset {
 
 .giftResult1, .giftResult2, .giftResult3 {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     flex-basis: 31%;
     margin: 5% 1%;
     justify-content: space-between;
@@ -119,7 +123,9 @@ fieldset {
 
 .giftResult1 img, .giftResult2 img, .giftResult3 img {
     width: 100%;
+    object-fit: cover;
     height: 300px;
+    border: 3px solid black;
 }
 
 .gifts i {
@@ -132,18 +138,21 @@ fieldset {
 
 #changeItem {
     width: 50%;
-    border: none;
-    border-radius: 5px;
-    color: #252424;
+    border-radius: 3px;
+    color: black;
     padding: 15px 20px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    border: 3px solid #FF7F50;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border: 3px solid black;
+    background-color: white;
+    box-shadow: 3px 3px 10px #f3be2c;
+    margin-right: 20px;
     transition: 0.3s;
 }
 
 #changeItem:hover {
-    border: 3px solid black;
+    background-color: #f3be2c;
+    box-shadow: 3px 3px 10px white;
 }
 
 #linkItem1, #linkItem2, #linkItem3 {
@@ -155,7 +164,6 @@ fieldset {
 .linkChange1, .linkChange2, .linkChange3 {
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
 }
 
 .gifts h3 {
@@ -167,42 +175,8 @@ fieldset {
 }
 
 #submitChange {
-    border: none;
     margin: 50px 0;
-    padding: 15px 25px;
-    border-radius: 5px;
-    font-size: 2rem;
-    transition: 0.3s;
-    letter-spacing: 1.5px;
 }
-
-#submitChange:hover {
-    border: 3px solid black;
-}
-
-.gifts .giftifyHeading {
-    font-size: 2.2rem;
-    width: 35%;
-    padding: 5px;
-    margin: 0 auto;
-}
-
-#giftify {
-    background-color: white;
-}
-
-#giftify:hover {
-    background-color: #FF7F50;
-}
-
-#giftify:active { 
-    transform: scale(1.1);
-    transition: transform 0.5s;
-}
-
-
-
-
 
 
 
@@ -210,10 +184,6 @@ fieldset {
 @media (max-width: 910px) {
     label {
         font-size: 1.8rem;
-    }
-
-    .carousel-cell {
-    width: 33%; /* full width */
     }
 
     .radioButtonsCategory label {
@@ -236,12 +206,14 @@ fieldset {
     }
 }
 
-@media (max-width: 600px) {
-    .carousel-cell {
-        width: 100%; /* full width */
+@media (max-width: 700px){
+    #categorySection h2 {
+        width: 70%;
+        margin: 0 auto;
+        line-height: 1.6;
     }
-
 }
+
 
 @media (max-width: 500px) {
 
@@ -258,9 +230,13 @@ fieldset {
         margin: 20px 0;
     }
 
-    .gifts .giftifyHeading {
-        margin-top: 5%;
-        width: 80%;
-        font-size: 1.6rem;
+    .radioButtonsCategory {
+        width: 50%;
+        display: flex;
     }
+
+    .giftIdeas .teacherHeading {
+        margin-top: 20px;
+    }
+
 }
